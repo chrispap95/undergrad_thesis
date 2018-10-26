@@ -1,0 +1,48 @@
+{
+	gStyle->SetOptTitle(kFALSE);
+	gStyle->SetPalette(kSolar);
+	
+	TCanvas *c = new TCanvas("c","c",1);
+	Double_t x[100],y[100],z[100];
+	Int_t n = 25;
+	for (Int_t i = 0; i <= n; ++i) {
+		x[i] = i*0.8+0.2;
+		y[i] = 2.43287*sqrt(x[i]/3.0);
+		z[i] = 2.23682*sqrt(x[i]/3.0);
+	}
+
+	TGraph* gr1 = new TGraph(n,x,y);
+	TGraph* gr2 = new TGraph(n,x,z);
+	
+	gr1->SetTitle("S_{1}");
+	gr1->GetYaxis()->SetTitle("Significance");
+	gr1->GetXaxis()->SetTitle("#int L [#alpha b^{-1}]");
+	gr1->GetXaxis()->SetTitleOffset(1.2);
+	gr1->GetXaxis()->SetRangeUser(0,18);
+	gr1->SetLineWidth(3);
+
+	gr2->SetTitle("S_{cL}");
+	gr2->SetLineWidth(3);
+
+	TLine gr3;
+	TLine gr4;
+	gr3.SetLineColor(kYellow);
+	gr3.SetLineWidth(2);
+	gr3.SetLineStyle(2);
+	gr4.SetLineColor(kRed);
+	gr4.SetLineWidth(2);
+	gr4.SetLineStyle(2);
+
+	gr1->Draw("AC plc pfc");
+	gr2->Draw("C plc pfc same");
+
+	gr3.DrawLine(0,3,18,3);
+	gr4.DrawLine(0,5,18,5);
+
+	auto leg = new TLegend(7,0.7,11,2,"","NB"); 
+	leg->AddEntry(gr1,"S_{1}","f");
+	leg->AddEntry(gr2,"S_{cL}","f");
+	leg->SetBorderSize(0);
+	leg->Draw();
+	c->Print("significance_graph.eps");
+}

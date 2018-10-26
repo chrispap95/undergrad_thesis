@@ -1,0 +1,33 @@
+#!/bin/bash
+echo "Compiling..."
+gcc -g -Og -std=c++11 pythia8root.cpp -I`${ROOTSYS}/bin/root-config --incdir` `${ROOTSYS}/bin/root-config --libs` -L/expsoft/pythia8/lib -lpythia8 -I/expsoft/pythia8/include/Pythia8 -I/expsoft/pythia8/include -lstdc++ -lm -lEG -lEGPythia8 -I`/expsoft/fastjet-3.3.0-cms/bin/fastjet-config --cxxflags --libs --plugins` -o pythia8root
+if [[ "$?" == "0" ]]; then
+	echo "Compliation completed successfully"
+	echo "Running GEN stage with Pythia"
+	sleep 5
+	for i in `seq 0 7`;do 
+		#"cp" -f ../jpsiInclusive.cmnd jpsiInclusive${i}.cmnd
+		# generate a random seed between 1 and 900000000
+		#SEED=$(expr $RANDOM \* $(echo $RANDOM / 1.193 | bc) + 1)
+		#echo "Random:seed = $SEED" >> jpsiInclusive${i}.cmnd
+		./pythia8root ../jet.cmnd /data/$USER/jet${i}-gen200K-pt60.root &
+		sleep 1
+	done
+
+	wait
+
+	if [[ "$?" == "0" ]]; then
+	        echo "GEN stage completed successfully"
+		hadd -f /data/$USER/jet-gen200K-pt60.root /data/$USER/jet?-gen200K-pt60.root
+		if [[ "$?" == "0" ]]; then
+		    rm -f /data/$USER/jet?-gen200K-pt60.root
+		    echo "run \`root -l /data/$USER/jet-gen200K-pt60.root' to view results"
+		else
+		    echo "hadd stage failed"
+		fi
+	else
+		echo "GEN stage failed"
+	fi
+else
+	echo "Compilation failed"
+fi

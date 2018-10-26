@@ -1,0 +1,33 @@
+void mbs() {
+	TFile* f1 = TFile::Open("signal/generator_signal_2.root");
+	TFile* f2 = TFile::Open("bkg/generator_bkg_2.root");
+	TCanvas* c = new TCanvas("c", "hists_overlay",1);
+
+	TH1F* h01s = (TH1F*)(f1->Get("h01"));
+	TH1F* h01sc = (TH1F*)(f1->Get("h01c"));
+	TH1F* h01b = (TH1F*)(f2->Get("h01b"));
+	TH1F* h01bc = (TH1F*)(f2->Get("h01bc"));
+	h01s->Scale(1);
+	h01b->Scale(10);
+
+	TH1F* h01sum = (TH1F*) h01s->Clone(); h01sum->Add(h01b);
+	TH1F* h01sumc = (TH1F*) h01sc->Clone();	h01sumc->Add(h01bc);
+
+	THStack* hs01 = new THStack("hs01", "m_{J/#psi#gamma} signal+background;m_{J/#psi#gamma} (GeC/c^{2})");
+	THStack* hs01c = new THStack("hs01c", "m_{J/#psi#gamma} signal+background accepted;m_{J/#psi#gamma} (GeV/c^{2})");
+
+	hs01->Add(h01s); hs01->Add(h01b); hs01->Add(h01sum);
+	hs01c->Add(h01sc); hs01c->Add(h01bc); hs01c->Add(h01sumc);
+	h01s->SetLineColor(kRed); h01s->SetStats(kFALSE); h01b->SetLineColor(kGreen); h01b->SetStats(kFALSE); h01sum->SetStats(kFALSE);
+	h01sc->SetLineColor(kRed); h01sc->SetStats(kFALSE); h01bc->SetLineColor(kGreen); h01bc->SetStats(kFALSE); h01sumc->SetStats(kFALSE);
+
+	auto l01 = new TLegend(0.65,0.7,0.9,0.9); l01->AddEntry(h01s,"Signal","l"); l01->AddEntry(h01b,"Background","l");
+	l01->AddEntry(h01sum,"sum","l"); l01->SetTextSize(0.05);
+	auto l01c = new TLegend(0.65,0.7,0.9,0.9); l01c->AddEntry(h01sc,"Signal","l"); l01c->AddEntry(h01bc,"Background","l"); 
+	l01c->AddEntry(h01sumc,"sum","l"); l01c->SetTextSize(0.05);
+	
+	hs01->Draw("nostack,hist"); l01->Draw(); 
+	c->Print("mbs.pdf(");
+	hs01c->Draw("nostack"); l01c->Draw();
+	c->Print("mbs.pdf)");
+}

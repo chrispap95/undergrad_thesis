@@ -1,0 +1,64 @@
+{
+	TCanvas* c2 = new TCanvas("c2","c2",1);
+	TFile* f = TFile::Open("hmass_2_pt40.root");
+	TH1D* h01b1 = (TH1D*)(f->Get("h01b1"));
+	TH1D* h01b2 = (TH1D*)(f->Get("h01b2"));
+	TH1D* h01b3 = (TH1D*)(f->Get("h01b3"));
+	TH1D* h01b4 = (TH1D*)(f->Get("h01b4"));
+	TH1F* hpt1 = (TH1F*)(f->Get("hpt1"));
+	TH1F* hpt2 = (TH1F*)(f->Get("hpt2"));
+	TH1F* hpt3 = (TH1F*)(f->Get("hpt3"));
+	TH1F* hpt4 = (TH1F*)(f->Get("hpt4"));
+
+	float normb1 = 708000;
+	float normb2 = 33870;
+	float normb3 = 4983;
+	float normb4 = 1845;
+	float norms = 0.027306;
+
+	TH1D h01b1_norm = normb1*(*h01b1);
+	TH1D h01b2_norm = normb2*(*h01b2);
+	TH1D h01b3_norm = normb3*(*h01b3);
+	TH1D h01b4_norm = normb4*(*h01b4);
+	TH1D h01s_norm = norms*(*h01s);
+
+	TH1D* h01b_norm = (TH1D*)(h01b1_norm.Clone());
+	h01b_norm->Add(&h01b2_norm);
+	h01b_norm->Add(&h01b3_norm);
+	h01b_norm->Add(&h01b4_norm);
+
+	THStack* hmass = new THStack("hmass","m_{J/#psi#gamma};m_{J/#psi#gamma} (GeV/c^{2})");
+	hmass->Add(h01b_norm);
+	hmass->Add(&h01s_norm);
+
+	auto legend1 = new TLegend(0.75,0.7,0.9,0.9); legend1->AddEntry(h01b_norm,"bkg","l"); legend1->AddEntry(&h01s_norm,"signal","l"); 
+	legend1->SetTextSize(0.05);
+
+	c2->Divide(2,2);
+	c2->cd(1); h01b1->Draw("hist");
+	c2->cd(2); h01b2->Draw("hist");
+	c2->cd(3); h01b3->Draw("hist");
+	c2->cd(4); h01b4->Draw("hist");
+        c2->Print("generator_mass_2_100K.pdf(");
+	c2->Clear();
+	hmass->Draw("hist"); legend1->Draw();
+        c2->Print("generator_mass_2_100K.pdf)");
+
+	THStack* hpt = new THStack("hpt","pT of Jets");
+	hpt->Add(hpt1);
+	hpt->Add(hpt2);
+	hpt->Add(hpt3);
+	hpt->Add(hpt4);
+	hpt->Draw("hist plc");
+	c2->Print("generator_pt_jet.pdf(");
+	TH1F hpt1_norm = normb1*(*hpt1);
+	TH1F hpt2_norm = normb2*(*hpt2);
+	TH1F hpt3_norm = normb3*(*hpt3);
+	TH1F hpt4_norm = normb4*(*hpt4);
+	TH1F* hpt_norm = (TH1F*)(hpt1_norm.Clone());
+	hpt_norm->Add(&hpt2_norm);
+	hpt_norm->Add(&hpt3_norm);
+	hpt_norm->Add(&hpt4_norm);
+	hpt_norm->Draw("hist");
+	c2->Print("generator_pt_jet.pdf)");
+}

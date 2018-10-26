@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "Compiling..."
+gcc -g -Og -std=c++11 pythia8root.cpp -I`${ROOTSYS}/bin/root-config --incdir` `${ROOTSYS}/bin/root-config --libs` -L/home/chrispap/hep-ex-sw/pythia8235/lib -lpythia8 -I/home/chrispap/hep-ex-sw/pythia8235/include/Pythia8 -I/home/chrispap/hep-ex-sw/pythia8235/include -lstdc++ -lm -lEG -lEGPythia8 -o pythia8root
+if [[ "$?" == "0" ]]; then
+	echo "Compliation completed successfully"
+	echo "Running GEN stage with Pythia"
+	sleep 5
+	./pythia8root ../higgsTojpsiGamma.cmnd higgsTojpsiGamma-gen.root
+	if [[ "$?" == "0" ]]; then
+		echo "GEN stage completed successfully"
+		echo "run \`root -l /data/$USER/higgsTojpsiGamma-gen.root' to view results"
+	else
+		echo "GEN stage failed"
+	fi
+else
+	echo "Compilation failed"
+fi

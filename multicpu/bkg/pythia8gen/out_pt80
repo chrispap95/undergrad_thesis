@@ -1,0 +1,457 @@
+Compiling...
+Compliation completed successfully
+Running GEN stage with Pythia
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 24 May 2018 at 16:20:52    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> ccbar(3S1)[3S1(1)] g                    401 |   6.421e-13 |
+ | g g -> ccbar(3S1)[3S1(8)] g                    402 |   1.099e-06 |
+ | q g -> ccbar(3S1)[3S1(8)] q                    403 |   5.701e-07 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g                 404 |   1.180e-09 |
+ | g g -> ccbar(3S1)[1S0(8)] g                    405 |   1.201e-09 |
+ | q g -> ccbar(3S1)[1S0(8)] q                    406 |   5.455e-10 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g                 407 |   1.090e-13 |
+ | g g -> ccbar(3S1)[3PJ(8)] g                    408 |   1.329e-09 |
+ | q g -> ccbar(3S1)[3PJ(8)] q                    409 |   6.034e-10 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g                 410 |   1.204e-13 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g                    411 |   2.404e-08 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q                    412 |   1.092e-08 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g                 413 |   2.185e-12 |
+ | g g -> ccbar(3PJ)[3S1(8)] g                    414 |   2.170e-07 |
+ | q g -> ccbar(3PJ)[3S1(8)] q                    415 |   1.126e-07 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g                 416 |   2.332e-10 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g                    417 |   3.488e-15 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g                    418 |   7.583e-10 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q                    419 |   3.444e-10 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g                 420 |   6.878e-14 |
+ | g g -> double ccbar(3S1)[3S1(1)]               421 |   3.252e-15 |
+ | q qbar -> double ccbar(3S1)[3S1(1)]            422 |   3.992e-16 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma                441 |   6.049e-14 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   266.66 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Charmonium:all                                |                       on |          off                         | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 80.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+     443  J/psi                               3   0   0    3.09692    0.00009    3.09602    3.09782  0.00000e+00   0   1   0   1   0
+              0     0   0.8023950   43       83      -83 
+              1     0   0.0594000    0       11      -11 
+              2     0   0.0593000    0       13      -13 
+              3     0   0.0130000    0      441       22 
+              4     0   0.0056000    0      113      111 
+              5     0   0.0056500    0      213     -211 
+              6     0   0.0056500    0     -213      211 
+              7     0   0.0036000    0      115      113 
+              8     0   0.0036000    0     -215      213 
+              9     0   0.0036000    0      215     -213 
+             10     0   0.0043000    0      225      223 
+             11     0   0.0022000    0      313     -315 
+             12     0   0.0022000    0      323     -325 
+             13     0   0.0022000    0     -323      325 
+             14     0   0.0025000    0      321     -323 
+             15     0   0.0025000    0     -321      323 
+             16     0   0.0021000    0      311     -313 
+             17     0   0.0021000    0     -311      313 
+             18     0   0.0019000    0    20323     -321 
+             19     0   0.0019000    0   -20323      321 
+             20     0   0.0015000    0    10213     -211 
+             21     0   0.0015000    0   -10213      211 
+             22     0   0.0023000    0    10113      111 
+             23     0   0.0004800    0    10331      223 
+             24     0   0.0007400    0      223      221 
+             25     0   0.0003600    0    10331      333 
+             26     0   0.0008000    0      333      335 
+             27     0   0.0006800    0    20333      223 
+             28     0   0.0007400    0      333      221 
+             29     0   0.0004500    0      223      111 
+             30     0   0.0004000    0      333      331 
+             31     0   0.0003200    0      333  9010221 
+             32     0   0.0002600    0      333    20223 
+             33     0   0.0001930    0      113      221 
+             34     0   0.0001820    0      223      331 
+             35     0   0.0001400    0      223  9010221 
+             36     0   0.0001050    0      113      331 
+             37     0   0.0011000    0     2224    -2224 
+             38     0   0.0005150    0     3112    -3112 
+             39     0   0.0005900    0     3314    -3314 
+             40     0   0.0003200    0     3324    -3324 
+             41     0   0.0003200    0     3324    -3324 
+             42     0   0.0001550    0     3114    -3114 
+             43     0   0.0001550    0     3224    -3224 
+             44     1   1.0000000    0       13      -13 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =   21, x =  1.957e-03, pdf =  2.303e+01 at Q2 =  6.817e+03.
+ In 2: id =   21, x =  1.145e-01, pdf =  7.441e-01 at same Q2.
+
+ Subprocess g g -> ccbar(3S1)[3S1(8)] g with code 402 is 2 -> 2.
+ It has sHat =  3.787e+04,    tHat = -2.894e+04,    uHat = -8.920e+03,
+       pTHat =  8.256e+01,   m3Hat =  3.297e+00,   m4Hat =  0.000e+00,
+    thetaHat =  2.128e+00,  phiHat =  5.798e+00.
+     alphaEM =  7.809e-03,  alphaS =  1.321e-01    at Q2 =  6.822e+03.
+
+ Impact parameter b =  6.580e-01 gives enhancement factor =  1.613e+00.
+ Max pT scale for MPI =  1.300e+04, ISR =  8.256e+01, FSR =  8.256e+01.
+ Number of MPI =     7, ISR =    19, FSRproc =    90, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3         21  (g)                -21     1     0     5     6   102   101      0.000      0.000     12.718     12.718      0.000
+     4         21  (g)                -21     2     0     5     6   104   103      0.000      0.000   -744.408    744.408      0.000
+     5    9940003  J/psi[3S1(8)]       23     3     4     0     0   104   101     73.039    -38.494   -566.064    572.063      3.297
+     6         21  g                   23     3     4     0     0   102   103    -73.039     38.494   -165.626    185.063      0.000
+                                   Charge sum:  0.000           Momentum sum:      0.000      0.000   -731.690    757.126    194.602
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+1% complete...
+2% complete...
+3% complete...
+4% complete...
+5% complete...
+6% complete...
+7% complete...
+8% complete...
+9% complete...
+10% complete...
+11% complete...
+12% complete...
+13% complete...
+14% complete...
+15% complete...
+16% complete...
+17% complete...
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+18% complete...
+19% complete...
+20% complete...
+21% complete...
+22% complete...
+23% complete...
+24% complete...
+25% complete...
+26% complete...
+27% complete...
+28% complete...
+29% complete...
+30% complete...
+31% complete...
+32% complete...
+33% complete...
+34% complete...
+35% complete...
+36% complete...
+37% complete...
+38% complete...
+39% complete...
+ PYTHIA Warning in TauDecays::decay: unknown correlated tau production, assuming from unpolarized photon  
+40% complete...
+41% complete...
+42% complete...
+43% complete...
+44% complete...
+45% complete...
+46% complete...
+47% complete...
+48% complete...
+49% complete...
+50% complete...
+51% complete...
+52% complete...
+53% complete...
+54% complete...
+55% complete...
+56% complete...
+57% complete...
+58% complete...
+59% complete...
+60% complete...
+61% complete...
+62% complete...
+63% complete...
+64% complete...
+65% complete...
+66% complete...
+67% complete...
+
+ Pythia::next(): 1000 events have been generated 
+68% complete...
+69% complete...
+70% complete...
+71% complete...
+72% complete...
+73% complete...
+74% complete...
+75% complete...
+76% complete...
+77% complete...
+78% complete...
+ PYTHIA Warning in Pythia::check: not quite matched particle energy/momentum/mass  
+79% complete...
+80% complete...
+81% complete...
+82% complete...
+83% complete...
+84% complete...
+85% complete...
+86% complete...
+87% complete...
+88% complete...
+89% complete...
+90% complete...
+91% complete...
+92% complete...
+93% complete...
+94% complete...
+95% complete...
+96% complete...
+97% complete...
+98% complete...
+99% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> ccbar(3S1)[3S1(1)] g                    401 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> ccbar(3S1)[3S1(8)] g                    402 |        5293        677        677 |   1.835e-07  3.534e-09 |
+ | q g -> ccbar(3S1)[3S1(8)] q                    403 |        2774        320        320 |   8.339e-08  2.560e-09 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g                 404 |           3          1          1 |   1.795e-10  1.795e-10 |
+ | g g -> ccbar(3S1)[1S0(8)] g                    405 |           7          1          1 |   1.780e-10  1.780e-10 |
+ | q g -> ccbar(3S1)[1S0(8)] q                    406 |           4          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g                 407 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> ccbar(3S1)[3PJ(8)] g                    408 |           8          0          0 |   0.000e+00  0.000e+00 |
+ | q g -> ccbar(3S1)[3PJ(8)] q                    409 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g                 410 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g                    411 |         158          8          8 |   2.778e-09  5.674e-10 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q                    412 |          59          5          5 |   1.046e-09  6.250e-10 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g                 413 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> ccbar(3PJ)[3S1(8)] g                    414 |        2332        341        341 |   8.353e-08  2.393e-09 |
+ | q g -> ccbar(3PJ)[3S1(8)] q                    415 |        1159        137        137 |   3.535e-08  1.695e-09 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g                 416 |           5          1          1 |   1.021e-10  1.021e-10 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g                    417 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g                    418 |           1          0          0 |   0.000e+00  0.000e+00 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q                    419 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g                 420 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> double ccbar(3S1)[3S1(1)]               421 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> double ccbar(3S1)[3S1(1)]            422 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma                441 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |       11803       1491       1491 |   3.900e-07  5.332e-09 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        6595 |
+ | g g -> q qbar (uds)                       112 |          91 |
+ | q g -> q g                                113 |        2818 |
+ | q q(bar)' -> q q(bar)'                    114 |         265 |
+ | q qbar -> g g                             115 |           1 |
+ | q qbar -> q' qbar' (uds)                  116 |           0 |
+ | g g -> c cbar                             121 |          18 |
+ | q qbar -> c cbar                          122 |           0 |
+ | g g -> b bbar                             123 |           5 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           0 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           0 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           0 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           0 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |           8 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           2 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           0 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           0 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           0 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           1 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        9804 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      1   Warning in Pythia::check: not quite matched particle energy/momentum/mass                              | 
+ |      2   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |      2   Warning in TauDecays::decay: unknown correlated tau production, assuming from unpolarized photon       | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       202835387 bytes  File  Size =   52415570 *
+*        :          : Tree compression factor =   3.41                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  202835017 bytes  File Size  =   52411107 *
+*Baskets :      441 : Basket Size=   25600000 bytes  Compression=   3.41     *
+*............................................................................*
+GEN stage completed successfully
+run `root -l /data/cpapage/jpsiIclusive-gen.root' to view results

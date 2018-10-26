@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "Compiling..."
+gcc -g -Og -std=c++11 pythia8hepmc.cpp -I`${ROOTSYS}/bin/root-config --incdir` `${ROOTSYS}/bin/root-config --libs` -L/home/chrispap/hep-ex-sw/pythia8235/lib -lpythia8 -I/home/chrispap/hep-ex-sw/pythia8235/include/Pythia8 -I/home/chrispap/hep-ex-sw/pythia8235/include -lstdc++ -lm -lEG -lEGPythia8 -lHepMC -o pythia8hepmc
+if [[ "$?" == "0" ]]; then
+	echo "Running GEN stage with Pythia..."
+	sleep 5
+	./pythia8hepmc ../higgsTojpsiGamma.cmnd higgsTojpsiGamma-gen.hepmc
+	if [[ "$?" == "0" ]]; then
+		echo "GEN stage completed successfully"
+		echo "Running SIM stage with Delphes..."
+		sleep 5
+		/home/chrispap/hep-ex-sw/Delphes-3.4.1/DelphesHepMC /home/chrispap/hep-ex-sw/Delphes-3.4.1/cards/delphes_card_CMS.tcl higgsTojpsiGamma-sim.root higgsTojpsiGamma-gen.hepmc
+		if [[ "$?" == "0" ]]; then
+			echo "SIM stage completed successfully"
+			echo "run \`root -l higgsTojpsiGamma-sim.root' to view results"
+		else
+			echo "SIM stage failed"
+		fi
+	else
+		echo "GEN stage failed"
+	fi
+else
+	echo "Compilation failed"
+fi

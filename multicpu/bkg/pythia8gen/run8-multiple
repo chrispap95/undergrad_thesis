@@ -1,0 +1,74 @@
+#!/bin/bash
+echo "Compiling..."
+gcc -g -Og -std=c++11 pythia8root.cpp -I`${ROOTSYS}/bin/root-config --incdir` `${ROOTSYS}/bin/root-config --libs` -L/expsoft/pythia8/lib -lpythia8 -I/expsoft/pythia8/include/Pythia8 -I/expsoft/pythia8/include -lstdc++ -lm -lEG -lEGPythia8 -o pythia8root
+if [[ "$?" == "0" ]]; then
+	echo "Compliation completed successfully"
+	echo "Running GEN stage with Pythia"
+	sleep 5
+
+	echo "Generating sample with pTHat = 30-60"
+	for i in `seq 0 7`;do 
+		./pythia8root jpsiInclusive-pt30-60.cmnd /data/$USER/jpsiInclusive${i}-gen100-pt30.root &
+		sleep 1
+	done
+
+	wait
+
+	if [[ "$?" == "0" ]]; then
+		echo "GEN stage completed successfully"
+		hadd -f /data/$USER/jpsiInclusive-gen100K-pt30-60.root /data/$USER/jpsiInclusive?-gen100-pt30.root
+		if [[ "$?" == "0" ]]; then
+		    echo "run \`root -l /data/$USER/jpsiInclusive-gen100K-pt30-60.root' to view results"
+		    rm -f /data/$USER/jpsiInclusive?-gen100-pt30.root
+		else
+		    echo "hadd stage failed"
+		fi
+	else
+		echo "GEN stage failed"
+	fi
+
+	echo "Generating sample with pTHat = 60-90"
+	for i in `seq 0 7`;do 
+		./pythia8root jpsiInclusive-pt60-90.cmnd /data/$USER/jpsiInclusive${i}-gen100-pt60.root &
+		sleep 1
+	done
+
+	wait
+
+	if [[ "$?" == "0" ]]; then
+		echo "GEN stage completed successfully"
+		hadd -f /data/$USER/jpsiInclusive-gen100K-pt60-90.root /data/$USER/jpsiInclusive?-gen100-pt60.root
+		if [[ "$?" == "0" ]]; then
+		    echo "run \`root -l /data/$USER/jpsiInclusive-gen100K-pt60-90.root' to view results"
+		    rm -f /data/$USER/jpsiInclusive?-gen100-pt60.root
+		else
+		    echo "hadd stage failed"
+		fi
+	else
+		echo "GEN stage failed"
+	fi
+
+	echo "Generating sample with pTHat = 90-120"
+	for i in `seq 0 7`;do 
+		./pythia8root jpsiInclusive-pt90-120.cmnd /data/$USER/jpsiInclusive${i}-gen100-pt90.root &
+		sleep 1
+	done
+
+	wait
+
+	if [[ "$?" == "0" ]]; then
+		echo "GEN stage completed successfully"
+		hadd -f /data/$USER/jpsiInclusive-gen100K-pt90-120.root /data/$USER/jpsiInclusive?-gen100-pt90.root
+		if [[ "$?" == "0" ]]; then
+		    echo "run \`root -l /data/$USER/jpsiInclusive-gen100K-pt90-120.root' to view results"
+		    rm -f /data/$USER/jpsiInclusive?-gen100-pt90.root
+		else
+		    echo "hadd stage failed"
+		fi
+	else
+		echo "GEN stage failed"
+	fi
+
+else
+	echo "Compilation failed"
+fi

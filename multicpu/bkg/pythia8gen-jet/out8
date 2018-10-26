@@ -1,0 +1,3056 @@
+Compiling...
+Compliation completed successfully
+Running GEN stage with Pythia
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 27 May 2018 at 04:41:26    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> g g                                     111 |   3.033e+00 |
+ | g g -> q qbar (uds)                            112 |   3.823e-02 |
+ | q g -> q g                                     113 |   1.947e+00 |
+ | q q(bar)' -> q q(bar)'                         114 |   1.917e-01 |
+ | q qbar -> g g                                  115 |   1.389e-03 |
+ | q qbar -> q' qbar' (uds)                       116 |   6.003e-04 |
+ | g g -> c cbar                                  121 |   1.261e-02 |
+ | q qbar -> c cbar                               122 |   1.989e-04 |
+ | g g -> b bbar                                  123 |   1.147e-02 |
+ | q qbar -> b bbar                               124 |   1.886e-04 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 27 May 2018 at 04:41:27    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   268.98 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | HardQCD:all                                   |                       on |          off                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 20.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> g g                                     111 |   3.033e+00 |
+ | g g -> q qbar (uds)                            112 |   3.823e-02 |
+ | q g -> q g                                     113 |   1.947e+00 |
+ | q q(bar)' -> q q(bar)'                         114 |   1.917e-01 |
+ | q qbar -> g g                                  115 |   1.389e-03 |
+ | q qbar -> q' qbar' (uds)                       116 |   6.003e-04 |
+ | g g -> c cbar                                  121 |   1.261e-02 |
+ | q qbar -> c cbar                               122 |   1.989e-04 |
+ | g g -> b bbar                                  123 |   1.147e-02 |
+ | q qbar -> b bbar                               124 |   1.886e-04 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =    2, x =  3.106e-01, pdf =  3.706e-01 at Q2 =  6.155e+02.
+ In 2: id =   21, x =  3.233e-04, pdf =  4.761e+01 at same Q2.
+
+ Subprocess q g -> q g with code 113 is 2 -> 2.
+ It has sHat =  1.697e+04,    tHat = -6.396e+02,    uHat = -1.633e+04,
+       pTHat =  2.481e+01,   m3Hat =  3.300e-01,   m4Hat =  0.000e+00,
+    thetaHat =  3.908e-01,  phiHat =  1.811e+00.
+     alphaEM =  7.704e-03,  alphaS =  1.638e-01    at Q2 =  6.155e+02.
+
+ Impact parameter b =  2.521e-01 gives enhancement factor =  3.835e+00.
+ Max pT scale for MPI =  2.481e+01, ISR =  2.481e+01, FSR =  2.481e+01.
+ Number of MPI =    13, ISR =    26, FSRproc =   147, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3          2  (u)                -21     1     0     5     6   101     0      0.000      0.000   2018.610   2018.610      0.000
+     4         21  (g)                -21     2     0     5     6   102   101      0.000      0.000     -2.102      2.102      0.000
+     5          2  u                   23     3     4     0     0   103     0     -5.906     24.097   1942.445   1942.604      0.330
+     6         21  g                   23     3     4     0     0   102   103      5.906    -24.097     74.063     78.108      0.000
+                                   Charge sum:  0.667           Momentum sum:      0.000      0.000   2016.509   2020.712    130.269
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 27 May 2018 at 04:41:28    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+1% complete...
+2% complete...
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   267.21 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | HardQCD:all                                   |                       on |          off                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 20.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+3% complete...
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =   21, x =  2.983e-02, pdf =  3.326e+00 at Q2 =  4.237e+02.
+ In 2: id =   21, x =  7.589e-04, pdf =  3.027e+01 at same Q2.
+
+ Subprocess g g -> g g with code 111 is 2 -> 2.
+ It has sHat =  3.826e+03,    tHat = -3.340e+03,    uHat = -4.852e+02,
+       pTHat =  2.058e+01,   m3Hat =  0.000e+00,   m4Hat =  0.000e+00,
+    thetaHat =  2.413e+00,  phiHat =  4.974e+00.
+     alphaEM =  7.688e-03,  alphaS =  1.702e-01    at Q2 =  4.237e+02.
+
+ Impact parameter b =  1.669e+00 gives enhancement factor =  3.688e-02.
+ Max pT scale for MPI =  2.058e+01, ISR =  2.058e+01, FSR =  2.058e+01.
+ Number of MPI =     1, ISR =     4, FSRproc =    12, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3         21  (g)                -21     1     0     5     6   101   102      0.000      0.000    193.872    193.872      0.000
+     4         21  (g)                -21     2     0     5     6   103   104      0.000      0.000     -4.933      4.933      0.000
+     5         21  g                   23     3     4     0     0   101   104      5.321    -19.883     20.281     28.896      0.000
+     6         21  g                   23     3     4     0     0   103   102     -5.321     19.883    168.658    169.909      0.000
+                                   Charge sum:  0.000           Momentum sum:      0.000      0.000    188.939    198.805     61.851
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> g g                                     111 |   3.033e+00 |
+ | g g -> q qbar (uds)                            112 |   3.823e-02 |
+ | q g -> q g                                     113 |   1.947e+00 |
+ | q q(bar)' -> q q(bar)'                         114 |   1.917e-01 |
+ | q qbar -> g g                                  115 |   1.389e-03 |
+ | q qbar -> q' qbar' (uds)                       116 |   6.003e-04 |
+ | g g -> c cbar                                  121 |   1.261e-02 |
+ | q qbar -> c cbar                               122 |   1.989e-04 |
+ | g g -> b bbar                                  123 |   1.147e-02 |
+ | q qbar -> b bbar                               124 |   1.886e-04 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+4% complete...
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 27 May 2018 at 04:41:29    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+1% complete...
+5% complete...
+2% complete...
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   270.59 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | HardQCD:all                                   |                       on |          off                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 20.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+6% complete...
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =   21, x =  6.984e-02, pdf =  1.518e+00 at Q2 =  5.102e+02.
+ In 2: id =   21, x =  1.101e-03, pdf =  2.572e+01 at same Q2.
+
+ Subprocess g g -> g g with code 111 is 2 -> 2.
+ It has sHat =  1.300e+04,    tHat = -1.247e+04,    uHat = -5.319e+02,
+       pTHat =  2.259e+01,   m3Hat =  0.000e+00,   m4Hat =  0.000e+00,
+    thetaHat =  2.734e+00,  phiHat =  9.777e-01.
+     alphaEM =  7.696e-03,  alphaS =  1.670e-01    at Q2 =  5.102e+02.
+
+ Impact parameter b =  9.245e-01 gives enhancement factor =  7.261e-01.
+ Max pT scale for MPI =  2.259e+01, ISR =  2.259e+01, FSR =  2.259e+01.
+ Number of MPI =     5, ISR =    11, FSRproc =    46, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3         21  (g)                -21     1     0     5     6   101   102      0.000      0.000    453.987    453.987      0.000
+     4         21  (g)                -21     2     0     5     6   103   104      0.000      0.000     -7.158      7.158      0.000
+     5         21  g                   23     3     4     0     0   101   104     12.625     18.729     11.712     25.443      0.000
+     6         21  g                   23     3     4     0     0   103   102    -12.625    -18.729    435.117    435.703      0.000
+                                   Charge sum:  0.000           Momentum sum:      0.000      0.000    446.829    461.145    114.014
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> g g                                     111 |   3.033e+00 |
+ | g g -> q qbar (uds)                            112 |   3.823e-02 |
+ | q g -> q g                                     113 |   1.947e+00 |
+ | q q(bar)' -> q q(bar)'                         114 |   1.917e-01 |
+ | q qbar -> g g                                  115 |   1.389e-03 |
+ | q qbar -> q' qbar' (uds)                       116 |   6.003e-04 |
+ | g g -> c cbar                                  121 |   1.261e-02 |
+ | q qbar -> c cbar                               122 |   1.989e-04 |
+ | g g -> b bbar                                  123 |   1.147e-02 |
+ | q qbar -> b bbar                               124 |   1.886e-04 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+ PYTHIA Error in StringFragmentation::fragment: stuck in joining  
+ PYTHIA Error in Pythia::next: hadronLevel failed; try again  
+1% complete...
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 27 May 2018 at 04:41:30    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+7% complete...
+3% complete...
+8% complete...
+2% complete...
+4% complete...
+9% complete...
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   263.57 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | HardQCD:all                                   |                       on |          off                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 20.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+5% complete...
+3% complete...
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =   21, x =  1.184e-02, pdf =  6.648e+00 at Q2 =  7.078e+02.
+ In 2: id =   21, x =  3.608e-03, pdf =  1.397e+01 at same Q2.
+
+ Subprocess g g -> g g with code 111 is 2 -> 2.
+ It has sHat =  7.219e+03,    tHat = -6.424e+03,    uHat = -7.955e+02,
+       pTHat =  2.660e+01,   m3Hat =  0.000e+00,   m4Hat =  0.000e+00,
+    thetaHat =  2.465e+00,  phiHat =  5.818e+00.
+     alphaEM =  7.710e-03,  alphaS =  1.616e-01    at Q2 =  7.078e+02.
+
+ Impact parameter b =  8.272e-01 gives enhancement factor =  9.930e-01.
+ Max pT scale for MPI =  2.660e+01, ISR =  2.660e+01, FSR =  2.660e+01.
+ Number of MPI =     7, ISR =    15, FSRproc =    53, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3         21  (g)                -21     1     0     5     6   102   101      0.000      0.000     76.950     76.950      0.000
+     4         21  (g)                -21     2     0     5     6   101   103      0.000      0.000    -23.455     23.455      0.000
+     5         21  g                   23     3     4     0     0   104   103     23.778    -11.934    -12.392     29.349      0.000
+     6         21  g                   23     3     4     0     0   102   104    -23.778     11.934     65.887     71.056      0.000
+                                   Charge sum:  0.000           Momentum sum:      0.000      0.000     53.495    100.405     84.967
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> g g                                     111 |   3.033e+00 |
+ | g g -> q qbar (uds)                            112 |   3.823e-02 |
+ | q g -> q g                                     113 |   1.947e+00 |
+ | q q(bar)' -> q q(bar)'                         114 |   1.917e-01 |
+ | q qbar -> g g                                  115 |   1.389e-03 |
+ | q qbar -> q' qbar' (uds)                       116 |   6.003e-04 |
+ | g g -> c cbar                                  121 |   1.261e-02 |
+ | q qbar -> c cbar                               122 |   1.989e-04 |
+ | g g -> b bbar                                  123 |   1.147e-02 |
+ | q qbar -> b bbar                               124 |   1.886e-04 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+6% complete...
+4% complete...
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 27 May 2018 at 04:41:31    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+10% complete...
+1% complete...
+5% complete...
+7% complete...
+2% complete...
+11% complete...
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   269.15 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | HardQCD:all                                   |                       on |          off                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 20.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+6% complete...
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> g g                                     111 |   3.033e+00 |
+ | g g -> q qbar (uds)                            112 |   3.823e-02 |
+ | q g -> q g                                     113 |   1.947e+00 |
+ | q q(bar)' -> q q(bar)'                         114 |   1.917e-01 |
+ | q qbar -> g g                                  115 |   1.389e-03 |
+ | q qbar -> q' qbar' (uds)                       116 |   6.003e-04 |
+ | g g -> c cbar                                  121 |   1.261e-02 |
+ | q qbar -> c cbar                               122 |   1.989e-04 |
+ | g g -> b bbar                                  123 |   1.147e-02 |
+ | q qbar -> b bbar                               124 |   1.886e-04 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =   21, x =  2.130e-03, pdf =  1.960e+01 at Q2 =  1.196e+03.
+ In 2: id =   21, x =  1.644e-02, pdf =  5.329e+00 at same Q2.
+
+ Subprocess g g -> g g with code 111 is 2 -> 2.
+ It has sHat =  5.918e+03,    tHat = -4.255e+03,    uHat = -1.663e+03,
+       pTHat =  3.458e+01,   m3Hat =  0.000e+00,   m4Hat =  0.000e+00,
+    thetaHat =  2.024e+00,  phiHat =  1.771e+00.
+     alphaEM =  7.733e-03,  alphaS =  1.536e-01    at Q2 =  1.196e+03.
+
+ Impact parameter b =  1.006e+00 gives enhancement factor =  5.516e-01.
+ Max pT scale for MPI =  3.458e+01, ISR =  3.458e+01, FSR =  3.458e+01.
+ Number of MPI =     1, ISR =     8, FSRproc =    61, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3         21  (g)                -21     1     0     5     6   102   101      0.000      0.000     13.842     13.842      0.000
+     4         21  (g)                -21     2     0     5     6   101   103      0.000      0.000   -106.883    106.883      0.000
+     5         21  g                   23     3     4     0     0   104   103     -6.863     33.892    -72.954     80.734      0.000
+     6         21  g                   23     3     4     0     0   102   104      6.863    -33.892    -20.088     39.991      0.000
+                                   Charge sum:  0.000           Momentum sum:      0.000      0.000    -93.041    120.725     76.928
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+8% complete...
+12% complete...
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 27 May 2018 at 04:41:32    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+3% complete...
+7% complete...
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+13% complete...
+1% complete...
+9% complete...
+14% complete...
+8% complete...
+4% complete...
+10% complete...
+2% complete...
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   266.09 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | HardQCD:all                                   |                       on |          off                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 20.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> g g                                     111 |   3.033e+00 |
+ | g g -> q qbar (uds)                            112 |   3.823e-02 |
+ | q g -> q g                                     113 |   1.947e+00 |
+ | q q(bar)' -> q q(bar)'                         114 |   1.917e-01 |
+ | q qbar -> g g                                  115 |   1.389e-03 |
+ | q qbar -> q' qbar' (uds)                       116 |   6.003e-04 |
+ | g g -> c cbar                                  121 |   1.261e-02 |
+ | q qbar -> c cbar                               122 |   1.989e-04 |
+ | g g -> b bbar                                  123 |   1.147e-02 |
+ | q qbar -> b bbar                               124 |   1.886e-04 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+11% complete...
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =   21, x =  4.046e-03, pdf =  1.330e+01 at Q2 =  9.189e+02.
+ In 2: id =    4, x =  8.412e-03, pdf =  2.626e-01 at same Q2.
+
+ Subprocess q g -> q g with code 113 is 2 -> 2.
+ It has sHat =  5.752e+03,    tHat = -1.148e+03,    uHat = -4.604e+03,
+       pTHat =  3.030e+01,   m3Hat =  0.000e+00,   m4Hat =  1.500e+00,
+    thetaHat =  9.263e-01,  phiHat =  5.679e+00.
+     alphaEM =  7.721e-03,  alphaS =  1.575e-01    at Q2 =  9.189e+02.
+
+ Impact parameter b =  7.935e-01 gives enhancement factor =  1.099e+00.
+ Max pT scale for MPI =  3.031e+01, ISR =  3.031e+01, FSR =  3.031e+01.
+ Number of MPI =     3, ISR =    10, FSRproc =    49, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3         21  (g)                -21     1     0     5     6   102   101      0.000      0.000     26.300     26.300      0.000
+     4          4  (c)                -21     2     0     5     6   101     0      0.000      0.000    -54.678     54.678      0.000
+     5         21  g                   23     3     4     0     0   102   103     24.942    -17.206     10.134     31.951      0.000
+     6          4  c                   23     3     4     0     0   103     0    -24.942     17.206    -38.512     49.027      1.500
+                                   Charge sum:  0.667           Momentum sum:      0.000      0.000    -28.378     80.978     75.843
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.230      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change:  6 Oct 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 27 May 2018 at 04:41:33    |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christian.bierlich@thep.lu.se                                   |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  School of Physics and Astronomy,                            |  | 
+ |  |      University of Birmingham, Birmingham, B152 2TT, UK;                     |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+5% complete...
+ PYTHIA Warning in SpaceShower::pT2nextQCD: weight above unity  
+9% complete...
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+15% complete...
+3% complete...
+1% complete...
+12% complete...
+6% complete...
+10% complete...
+16% complete...
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   267.23 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | HardQCD:all                                   |                       on |          off                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 20.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+11% complete...
+13% complete...
+4% complete...
+2% complete...
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 1.300e+04 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | g g -> g g                                     111 |   3.033e+00 |
+ | g g -> q qbar (uds)                            112 |   3.823e-02 |
+ | q g -> q g                                     113 |   1.947e+00 |
+ | q q(bar)' -> q q(bar)'                         114 |   1.917e-01 |
+ | q qbar -> g g                                  115 |   1.389e-03 |
+ | q qbar -> q' qbar' (uds)                       116 |   6.003e-04 |
+ | g g -> c cbar                                  121 |   1.261e-02 |
+ | q qbar -> c cbar                               122 |   1.989e-04 |
+ | g g -> b bbar                                  123 |   1.147e-02 |
+ | q qbar -> b bbar                               124 |   1.886e-04 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =   21, x =  5.133e-02, pdf =  2.061e+00 at Q2 =  5.532e+02.
+ In 2: id =    5, x =  5.527e-04, pdf =  6.106e-01 at same Q2.
+
+ Subprocess q g -> q g with code 113 is 2 -> 2.
+ It has sHat =  4.794e+03,    tHat = -6.382e+02,    uHat = -4.156e+03,
+       pTHat =  2.341e+01,   m3Hat =  0.000e+00,   m4Hat =  4.800e+00,
+    thetaHat =  7.470e-01,  phiHat =  4.799e-01.
+     alphaEM =  7.699e-03,  alphaS =  1.656e-01    at Q2 =  5.532e+02.
+
+ Impact parameter b =  5.797e-01 gives enhancement factor =  1.974e+00.
+ Max pT scale for MPI =  2.352e+01, ISR =  2.352e+01, FSR =  2.352e+01.
+ Number of MPI =    16, ISR =    30, FSRproc =    99, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3         21  (g)                -21     1     0     5     6   102   103      0.000      0.000    333.620    333.620      0.000
+     4          5  (b)                -21     2     0     5     6   101     0      0.000      0.000     -3.592      3.592      0.000
+     5         21  g                   23     3     4     0     0   101   103     20.764     10.807    287.341    288.293      0.000
+     6          5  b                   23     3     4     0     0   102     0    -20.764    -10.807     42.686     48.919      4.800
+                                   Charge sum: -0.333           Momentum sum:      0.000      0.000    330.027    337.212     69.238
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+7% complete...
+17% complete...
+12% complete...
+3% complete...
+14% complete...
+8% complete...
+18% complete...
+1% complete...
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+9% complete...
+4% complete...
+19% complete...
+5% complete...
+2% complete...
+13% complete...
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    56.79 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.81 gives sigmaInteraction =   267.60 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:eCM                                     |                13000.000 |    14000.000    10.00000             | 
+ | Check:epTolErr                                |                0.0100000 |   1.0000e-04                         | 
+ | HardQCD:all                                   |                       on |          off                         | 
+ | Main:timesAllowErrors                         |                    10000 |           10           0             | 
+ | MultipartonInteractions:ecmPow                |                  0.25208 |      0.21500         0.0     0.50000 | 
+ | MultipartonInteractions:expPow                |                  1.60000 |      1.85000     0.40000    10.00000 | 
+ | MultipartonInteractions:pT0Ref                |                  2.40240 |      2.28000     0.50000    10.00000 | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ParticleDecays:limitTau0                      |                       on |          off                         | 
+ | PhaseSpace:pTHatMin                           |                 20.00000 |          0.0         0.0             | 
+ | Random:seed                                   |                        0 |           -1               900000000 | 
+ | Random:setSeed                                |                       on |          off                         | 
+ | SLHA:minMassSM                                |                 1000.000 |    100.00000                         | 
+ | Stat:showPartonLevel                          |                       on |          off                         | 
+ | Tune:preferLHAPDF                             |                        2 |            1           0           2 | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+15% complete...
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id =   2212, pz =  6.500e+03, e =  6.500e+03, m =  9.383e-01.
+ Beam B: id =   2212, pz = -6.500e+03, e =  6.500e+03, m =  9.383e-01.
+
+ In 1: id =    1, x =  1.849e-02, pdf =  5.359e-01 at Q2 =  2.839e+03.
+ In 2: id =   21, x =  2.249e-02, pdf =  4.204e+00 at same Q2.
+
+ Subprocess q g -> q g with code 113 is 2 -> 2.
+ It has sHat =  7.028e+04,    tHat = -2.964e+03,    uHat = -6.731e+04,
+       pTHat =  5.328e+01,   m3Hat =  3.300e-01,   m4Hat =  0.000e+00,
+    thetaHat =  4.137e-01,  phiHat =  3.759e-01.
+     alphaEM =  7.770e-03,  alphaS =  1.421e-01    at Q2 =  2.839e+03.
+
+ Impact parameter b =  2.788e-01 gives enhancement factor =  3.673e+00.
+ Max pT scale for MPI =  5.328e+01, ISR =  5.328e+01, FSR =  5.328e+01.
+ Number of MPI =     7, ISR =    13, FSRproc =    37, FSRreson =     0.
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000  13000.000  13000.000
+     1       2212  (p+)               -12     0     0     3     0     0     0      0.000      0.000   6500.000   6500.000      0.938
+     2       2212  (p+)               -12     0     0     4     0     0     0      0.000      0.000  -6500.000   6500.000      0.938
+     3          1  (d)                -21     1     0     5     6   101     0      0.000      0.000    120.190    120.190      0.000
+     4         21  (g)                -21     2     0     5     6   102   103      0.000      0.000   -146.176    146.176      0.000
+     5          1  d                   23     3     4     0     0   102     0     49.564     19.561    108.954    121.286      0.330
+     6         21  g                   23     3     4     0     0   101   103    -49.564    -19.561   -134.941    145.080      0.000
+                                   Charge sum: -0.333           Momentum sum:      0.000      0.000    -25.987    266.366    265.095
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+5% complete...
+10% complete...
+14% complete...
+20% complete...
+3% complete...
+16% complete...
+6% complete...
+1% complete...
+11% complete...
+17% complete...
+6% complete...
+21% complete...
+15% complete...
+4% complete...
+12% complete...
+2% complete...
+22% complete...
+7% complete...
+18% complete...
+7% complete...
+5% complete...
+16% complete...
+3% complete...
+13% complete...
+23% complete...
+8% complete...
+6% complete...
+19% complete...
+8% complete...
+24% complete...
+4% complete...
+14% complete...
+20% complete...
+17% complete...
+9% complete...
+9% complete...
+25% complete...
+5% complete...
+15% complete...
+7% complete...
+10% complete...
+18% complete...
+10% complete...
+21% complete...
+6% complete...
+16% complete...
+11% complete...
+22% complete...
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+8% complete...
+7% complete...
+11% complete...
+26% complete...
+9% complete...
+19% complete...
+17% complete...
+23% complete...
+12% complete...
+12% complete...
+8% complete...
+10% complete...
+13% complete...
+27% complete...
+24% complete...
+18% complete...
+20% complete...
+9% complete...
+13% complete...
+25% complete...
+28% complete...
+14% complete...
+11% complete...
+21% complete...
+19% complete...
+10% complete...
+14% complete...
+26% complete...
+12% complete...
+15% complete...
+22% complete...
+20% complete...
+11% complete...
+29% complete...
+27% complete...
+15% complete...
+13% complete...
+16% complete...
+12% complete...
+23% complete...
+17% complete...
+14% complete...
+24% complete...
+21% complete...
+30% complete...
+28% complete...
+18% complete...
+25% complete...
+16% complete...
+13% complete...
+15% complete...
+22% complete...
+29% complete...
+31% complete...
+14% complete...
+19% complete...
+17% complete...
+26% complete...
+16% complete...
+15% complete...
+30% complete...
+23% complete...
+20% complete...
+32% complete...
+17% complete...
+33% complete...
+16% complete...
+24% complete...
+31% complete...
+18% complete...
+21% complete...
+27% complete...
+25% complete...
+18% complete...
+34% complete...
+17% complete...
+19% complete...
+28% complete...
+22% complete...
+18% complete...
+26% complete...
+19% complete...
+35% complete...
+20% complete...
+32% complete...
+23% complete...
+ PYTHIA Warning in Pythia::check: not quite matched particle energy/momentum/mass  
+27% complete...
+20% complete...
+21% complete...
+29% complete...
+33% complete...
+36% complete...
+19% complete...
+24% complete...
+22% complete...
+30% complete...
+20% complete...
+28% complete...
+37% complete...
+21% complete...
+34% complete...
+23% complete...
+25% complete...
+29% complete...
+31% complete...
+21% complete...
+35% complete...
+22% complete...
+24% complete...
+38% complete...
+30% complete...
+22% complete...
+26% complete...
+32% complete...
+25% complete...
+36% complete...
+27% complete...
+31% complete...
+23% complete...
+23% complete...
+39% complete...
+ PYTHIA Error in SpaceShower::pT2nearThreshold: stuck in loop  
+33% complete...
+32% complete...
+24% complete...
+37% complete...
+28% complete...
+34% complete...
+24% complete...
+40% complete...
+26% complete...
+38% complete...
+29% complete...
+25% complete...
+35% complete...
+39% complete...
+25% complete...
+27% complete...
+33% complete...
+ PYTHIA Error in StringFragmentation::fragment: stuck in joining  
+ PYTHIA Error in Pythia::next: hadronLevel failed; try again  
+41% complete...
+30% complete...
+26% complete...
+34% complete...
+40% complete...
+36% complete...
+26% complete...
+42% complete...
+28% complete...
+27% complete...
+31% complete...
+37% complete...
+35% complete...
+43% complete...
+27% complete...
+28% complete...
+41% complete...
+32% complete...
+38% complete...
+29% complete...
+44% complete...
+29% complete...
+33% complete...
+36% complete...
+28% complete...
+42% complete...
+30% complete...
+39% complete...
+45% complete...
+34% complete...
+37% complete...
+30% complete...
+43% complete...
+31% complete...
+29% complete...
+40% complete...
+31% complete...
+38% complete...
+46% complete...
+35% complete...
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+39% complete...
+41% complete...
+32% complete...
+36% complete...
+30% complete...
+44% complete...
+47% complete...
+32% complete...
+45% complete...
+40% complete...
+48% complete...
+31% complete...
+42% complete...
+33% complete...
+33% complete...
+37% complete...
+43% complete...
+49% complete...
+32% complete...
+34% complete...
+46% complete...
+38% complete...
+34% complete...
+50% complete...
+41% complete...
+35% complete...
+33% complete...
+44% complete...
+39% complete...
+35% complete...
+47% complete...
+42% complete...
+36% complete...
+51% complete...
+36% complete...
+45% complete...
+40% complete...
+48% complete...
+43% complete...
+49% complete...
+37% complete...
+52% complete...
+34% complete...
+41% complete...
+44% complete...
+46% complete...
+50% complete...
+35% complete...
+42% complete...
+37% complete...
+38% complete...
+53% complete...
+45% complete...
+36% complete...
+51% complete...
+38% complete...
+39% complete...
+54% complete...
+ PYTHIA Error in StringFragmentation::fragment: stuck in joining  
+ PYTHIA Error in Pythia::next: hadronLevel failed; try again  
+43% complete...
+47% complete...
+52% complete...
+46% complete...
+37% complete...
+40% complete...
+48% complete...
+44% complete...
+39% complete...
+55% complete...
+53% complete...
+38% complete...
+56% complete...
+45% complete...
+40% complete...
+54% complete...
+47% complete...
+49% complete...
+39% complete...
+57% complete...
+41% complete...
+46% complete...
+55% complete...
+41% complete...
+50% complete...
+48% complete...
+58% complete...
+47% complete...
+42% complete...
+49% complete...
+51% complete...
+40% complete...
+43% complete...
+56% complete...
+42% complete...
+59% complete...
+41% complete...
+48% complete...
+50% complete...
+44% complete...
+60% complete...
+52% complete...
+57% complete...
+43% complete...
+51% complete...
+45% complete...
+42% complete...
+58% complete...
+61% complete...
+49% complete...
+43% complete...
+53% complete...
+46% complete...
+52% complete...
+44% complete...
+62% complete...
+50% complete...
+59% complete...
+63% complete...
+53% complete...
+44% complete...
+54% complete...
+45% complete...
+45% complete...
+60% complete...
+64% complete...
+51% complete...
+54% complete...
+55% complete...
+61% complete...
+47% complete...
+46% complete...
+65% complete...
+52% complete...
+46% complete...
+55% complete...
+53% complete...
+66% complete...
+62% complete...
+47% complete...
+56% complete...
+54% complete...
+56% complete...
+48% complete...
+63% complete...
+67% complete...
+55% complete...
+47% complete...
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+48% complete...
+48% complete...
+68% complete...
+57% complete...
+57% complete...
+49% complete...
+64% complete...
+56% complete...
+58% complete...
+49% complete...
+49% complete...
+69% complete...
+57% complete...
+65% complete...
+58% complete...
+50% complete...
+66% complete...
+58% complete...
+59% complete...
+70% complete...
+50% complete...
+59% complete...
+50% complete...
+51% complete...
+67% complete...
+60% complete...
+60% complete...
+51% complete...
+52% complete...
+71% complete...
+59% complete...
+51% complete...
+61% complete...
+ PYTHIA Error in StringFragmentation::fragment: stuck in joining  
+ PYTHIA Error in Pythia::next: hadronLevel failed; try again  
+68% complete...
+72% complete...
+52% complete...
+61% complete...
+53% complete...
+62% complete...
+52% complete...
+60% complete...
+53% complete...
+54% complete...
+69% complete...
+53% complete...
+62% complete...
+63% complete...
+61% complete...
+54% complete...
+70% complete...
+54% complete...
+64% complete...
+63% complete...
+55% complete...
+73% complete...
+62% complete...
+55% complete...
+65% complete...
+64% complete...
+63% complete...
+56% complete...
+56% complete...
+74% complete...
+55% complete...
+71% complete...
+65% complete...
+ PYTHIA Warning in TauDecays::decay: unknown correlated tau production, assuming from unpolarized photon  
+66% complete...
+75% complete...
+64% complete...
+72% complete...
+57% complete...
+56% complete...
+57% complete...
+76% complete...
+66% complete...
+67% complete...
+73% complete...
+58% complete...
+65% complete...
+67% complete...
+68% complete...
+58% complete...
+74% complete...
+77% complete...
+57% complete...
+68% complete...
+59% complete...
+69% complete...
+59% complete...
+66% complete...
+69% complete...
+75% complete...
+58% complete...
+78% complete...
+76% complete...
+60% complete...
+70% complete...
+60% complete...
+59% complete...
+67% complete...
+70% complete...
+77% complete...
+61% complete...
+79% complete...
+68% complete...
+61% complete...
+60% complete...
+78% complete...
+69% complete...
+71% complete...
+61% complete...
+62% complete...
+80% complete...
+62% complete...
+79% complete...
+72% complete...
+70% complete...
+71% complete...
+81% complete...
+63% complete...
+62% complete...
+80% complete...
+64% complete...
+71% complete...
+72% complete...
+63% complete...
+73% complete...
+82% complete...
+63% complete...
+65% complete...
+72% complete...
+73% complete...
+83% complete...
+81% complete...
+74% complete...
+73% complete...
+64% complete...
+64% complete...
+66% complete...
+84% complete...
+82% complete...
+74% complete...
+75% complete...
+67% complete...
+65% complete...
+65% complete...
+83% complete...
+85% complete...
+76% complete...
+ PYTHIA Warning in Pythia::check: not quite matched particle energy/momentum/mass  
+68% complete...
+75% complete...
+74% complete...
+77% complete...
+86% complete...
+ PYTHIA Warning in Pythia::check: not quite matched particle energy/momentum/mass  
+ PYTHIA Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame  
+66% complete...
+66% complete...
+84% complete...
+76% complete...
+78% complete...
+69% complete...
+75% complete...
+67% complete...
+67% complete...
+85% complete...
+79% complete...
+76% complete...
+77% complete...
+70% complete...
+87% complete...
+78% complete...
+77% complete...
+80% complete...
+68% complete...
+88% complete...
+78% complete...
+79% complete...
+86% complete...
+69% complete...
+81% complete...
+68% complete...
+89% complete...
+71% complete...
+79% complete...
+87% complete...
+82% complete...
+80% complete...
+70% complete...
+69% complete...
+90% complete...
+72% complete...
+83% complete...
+88% complete...
+81% complete...
+91% complete...
+80% complete...
+ PYTHIA Error in StringFragmentation::fragment: stuck in joining  
+ PYTHIA Error in Pythia::next: hadronLevel failed; try again  
+70% complete...
+82% complete...
+89% complete...
+84% complete...
+73% complete...
+92% complete...
+81% complete...
+71% complete...
+71% complete...
+83% complete...
+85% complete...
+82% complete...
+90% complete...
+93% complete...
+74% complete...
+84% complete...
+72% complete...
+83% complete...
+75% complete...
+72% complete...
+91% complete...
+94% complete...
+73% complete...
+84% complete...
+86% complete...
+92% complete...
+73% complete...
+95% complete...
+76% complete...
+74% complete...
+85% complete...
+85% complete...
+74% complete...
+93% complete...
+77% complete...
+96% complete...
+87% complete...
+94% complete...
+75% complete...
+86% complete...
+86% complete...
+75% complete...
+78% complete...
+95% complete...
+88% complete...
+76% complete...
+87% complete...
+76% complete...
+79% complete...
+87% complete...
+97% complete...
+89% complete...
+77% complete...
+96% complete...
+88% complete...
+98% complete...
+77% complete...
+80% complete...
+97% complete...
+78% complete...
+90% complete...
+89% complete...
+88% complete...
+98% complete...
+78% complete...
+81% complete...
+99% complete...
+79% complete...
+89% complete...
+79% complete...
+91% complete...
+90% complete...
+99% complete...
+82% complete...
+80% complete...
+90% complete...
+92% complete...
+80% complete...
+83% complete...
+91% complete...
+91% complete...
+ PYTHIA Error in SpaceShower::pT2nearThreshold: stuck in loop  
+81% complete...
+93% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> g g                                     111 |        4238        624        624 |   4.279e-01  9.793e-03 |
+ | g g -> q qbar (uds)                            112 |          41          8          8 |   8.373e-03  1.488e-03 |
+ | q g -> q g                                     113 |        2669        329        329 |   2.443e-01  7.702e-03 |
+ | q q(bar)' -> q q(bar)'                         114 |         272         30         30 |   2.335e-02  2.177e-03 |
+ | q qbar -> g g                                  115 |           2          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> q' qbar' (uds)                       116 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> c cbar                                  121 |          18          4          4 |   2.472e-03  7.301e-04 |
+ | q qbar -> c cbar                               122 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> b bbar                                  123 |          19          5          5 |   3.055e-03  6.075e-04 |
+ | q qbar -> b bbar                               124 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |        7259       1000       1000 |   7.094e-01  1.277e-02 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        4591 |
+ | g g -> q qbar (uds)                       112 |          70 |
+ | q g -> q g                                113 |        2024 |
+ | q q(bar)' -> q q(bar)'                    114 |         195 |
+ | q qbar -> g g                             115 |           2 |
+ | q qbar -> q' qbar' (uds)                  116 |           0 |
+ | g g -> c cbar                             121 |          15 |
+ | q qbar -> c cbar                          122 |           0 |
+ | g g -> b bbar                             123 |           5 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           1 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           1 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           2 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           1 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |           5 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           1 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           0 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           0 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           0 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           0 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        6913 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      1   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |      1   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |      1   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       180139887 bytes  File  Size =   52527072 *
+*        :          : Tree compression factor =   3.41                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  180139517 bytes  File Size  =   52522589 *
+*Baskets :      439 : Basket Size=   25600000 bytes  Compression=   3.41     *
+*............................................................................*
+84% complete...
+92% complete...
+92% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> g g                                     111 |        4114        603        603 |   4.467e-01  1.003e-02 |
+ | g g -> q qbar (uds)                            112 |          47         13         13 |   7.686e-03  1.257e-03 |
+ | q g -> q g                                     113 |        2710        333        333 |   2.371e-01  7.339e-03 |
+ | q q(bar)' -> q q(bar)'                         114 |         307         45         45 |   2.686e-02  2.298e-03 |
+ | q qbar -> g g                                  115 |           3          1          1 |   3.284e-04  3.284e-04 |
+ | q qbar -> q' qbar' (uds)                       116 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> c cbar                                  121 |          13          3          3 |   1.779e-03  5.504e-04 |
+ | q qbar -> c cbar                               122 |           2          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> b bbar                                  123 |          19          2          2 |   2.104e-03  6.178e-04 |
+ | q qbar -> b bbar                               124 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |        7215       1000       1000 |   7.225e-01  1.273e-02 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        4551 |
+ | g g -> q qbar (uds)                       112 |          59 |
+ | q g -> q g                                113 |        1948 |
+ | q q(bar)' -> q q(bar)'                    114 |         177 |
+ | q qbar -> g g                             115 |           3 |
+ | q qbar -> q' qbar' (uds)                  116 |           3 |
+ | g g -> c cbar                             121 |          18 |
+ | q qbar -> c cbar                          122 |           0 |
+ | g g -> b bbar                             123 |           9 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           0 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           0 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           0 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           0 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |           6 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           2 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           0 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           0 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           0 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           1 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        6777 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      1   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |      1   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |      1   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       180050393 bytes  File  Size =   52571602 *
+*        :          : Tree compression factor =   3.41                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  180050023 bytes  File Size  =   52567093 *
+*Baskets :      444 : Basket Size=   25600000 bytes  Compression=   3.41     *
+*............................................................................*
+81% complete...
+94% complete...
+93% complete...
+82% complete...
+93% complete...
+95% complete...
+94% complete...
+83% complete...
+96% complete...
+85% complete...
+94% complete...
+97% complete...
+84% complete...
+95% complete...
+86% complete...
+82% complete...
+87% complete...
+83% complete...
+98% complete...
+95% complete...
+96% complete...
+88% complete...
+ PYTHIA Warning in Pythia::check: not quite matched particle energy/momentum/mass  
+84% complete...
+85% complete...
+97% complete...
+99% complete...
+96% complete...
+89% complete...
+85% complete...
+98% complete...
+86% complete...
+97% complete...
+86% complete...
+90% complete...
+99% complete...
+98% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> g g                                     111 |        4301        640        640 |   4.399e-01  9.687e-03 |
+ | g g -> q qbar (uds)                            112 |          50          6          6 |   8.454e-03  1.163e-03 |
+ | q g -> q g                                     113 |        2712        321        321 |   2.392e-01  7.420e-03 |
+ | q q(bar)' -> q q(bar)'                         114 |         243         27         27 |   2.716e-02  2.508e-03 |
+ | q qbar -> g g                                  115 |           2          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> q' qbar' (uds)                       116 |           1          1          1 |   1.372e-04  1.372e-04 |
+ | g g -> c cbar                                  121 |          16          3          3 |   2.990e-03  7.807e-04 |
+ | q qbar -> c cbar                               122 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> b bbar                                  123 |          13          2          2 |   3.027e-03  4.788e-04 |
+ | q qbar -> b bbar                               124 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |        7338       1000       1000 |   7.209e-01  1.255e-02 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        4575 |
+ | g g -> q qbar (uds)                       112 |          60 |
+ | q g -> q g                                113 |        1989 |
+ | q q(bar)' -> q q(bar)'                    114 |         177 |
+ | q qbar -> g g                             115 |           4 |
+ | q qbar -> q' qbar' (uds)                  116 |           1 |
+ | g g -> c cbar                             121 |          16 |
+ | q qbar -> c cbar                          122 |           1 |
+ | g g -> b bbar                             123 |           6 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           0 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           0 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           1 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           0 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |           5 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           2 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           0 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           0 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           0 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           0 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        6837 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      1   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |      1   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |      3   Warning in Pythia::check: not quite matched particle energy/momentum/mass                              | 
+ |      1   Warning in SpaceShower::pT2nextQCD: weight above unity                                                 | 
+ |      4   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       179945949 bytes  File  Size =   52502045 *
+*        :          : Tree compression factor =   3.41                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  179945579 bytes  File Size  =   52497643 *
+*Baskets :      430 : Basket Size=   25600000 bytes  Compression=   3.41     *
+*............................................................................*
+87% complete...
+87% complete...
+91% complete...
+88% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> g g                                     111 |        3943        619        619 |   4.661e-01  1.043e-02 |
+ | g g -> q qbar (uds)                            112 |          49          3          3 |   6.256e-03  1.156e-03 |
+ | q g -> q g                                     113 |        2608        324        324 |   2.402e-01  7.729e-03 |
+ | q q(bar)' -> q q(bar)'                         114 |         261         41         41 |   2.835e-02  2.438e-03 |
+ | q qbar -> g g                                  115 |           3          1          1 |   2.571e-04  2.571e-04 |
+ | q qbar -> q' qbar' (uds)                       116 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> c cbar                                  121 |          24          8          8 |   3.200e-03  6.591e-04 |
+ | q qbar -> c cbar                               122 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> b bbar                                  123 |          14          4          4 |   3.747e-03  7.938e-04 |
+ | q qbar -> b bbar                               124 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |        6902       1000       1000 |   7.481e-01  1.330e-02 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        4545 |
+ | g g -> q qbar (uds)                       112 |          62 |
+ | q g -> q g                                113 |        1971 |
+ | q q(bar)' -> q q(bar)'                    114 |         183 |
+ | q qbar -> g g                             115 |           7 |
+ | q qbar -> q' qbar' (uds)                  116 |           2 |
+ | g g -> c cbar                             121 |          18 |
+ | q qbar -> c cbar                          122 |           0 |
+ | g g -> b bbar                             123 |           4 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           1 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           0 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           0 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           0 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |          11 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           0 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           0 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           0 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           0 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           0 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        6804 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      1   Error in SpaceShower::pT2nearThreshold: stuck in loop                                                  | 
+ |      4   Warning in Pythia::check: not quite matched particle energy/momentum/mass                              | 
+ |      3   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+88% complete...
+92% complete...
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       175847881 bytes  File  Size =   44989378 *
+*        :          : Tree compression factor =   3.41                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  175847511 bytes  File Size  =   44984870 *
+*Baskets :      440 : Basket Size=   25600000 bytes  Compression=   3.41     *
+*............................................................................*
+89% complete...
+99% complete...
+89% complete...
+93% complete...
+90% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> g g                                     111 |        4316        635        635 |   4.423e-01  9.664e-03 |
+ | g g -> q qbar (uds)                            112 |          51          4          4 |   7.377e-03  1.149e-03 |
+ | q g -> q g                                     113 |        2697        326        326 |   2.410e-01  7.396e-03 |
+ | q q(bar)' -> q q(bar)'                         114 |         258         29         29 |   2.477e-02  2.391e-03 |
+ | q qbar -> g g                                  115 |           4          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> q' qbar' (uds)                       116 |           2          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> c cbar                                  121 |          10          1          1 |   2.149e-03  2.149e-03 |
+ | q qbar -> c cbar                               122 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> b bbar                                  123 |          19          5          5 |   2.413e-03  6.105e-04 |
+ | q qbar -> b bbar                               124 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |        7357       1000       1000 |   7.200e-01  1.265e-02 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        4717 |
+ | g g -> q qbar (uds)                       112 |          72 |
+ | q g -> q g                                113 |        2043 |
+ | q q(bar)' -> q q(bar)'                    114 |         171 |
+ | q qbar -> g g                             115 |           6 |
+ | q qbar -> q' qbar' (uds)                  116 |           1 |
+ | g g -> c cbar                             121 |          21 |
+ | q qbar -> c cbar                          122 |           1 |
+ | g g -> b bbar                             123 |          12 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           2 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           0 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           1 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           0 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |           6 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           2 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           1 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           0 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           0 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           1 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        7057 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      2   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |      2   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |      5   Warning in Pythia::check: not quite matched particle energy/momentum/mass                              | 
+ |      4   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |      1   Warning in TauDecays::decay: unknown correlated tau production, assuming from unpolarized photon       | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       182634849 bytes  File  Size =   52450578 *
+*        :          : Tree compression factor =   3.42                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  182634479 bytes  File Size  =   52446028 *
+*Baskets :      448 : Basket Size=   25600000 bytes  Compression=   3.42     *
+*............................................................................*
+94% complete...
+90% complete...
+91% complete...
+95% complete...
+91% complete...
+92% complete...
+96% complete...
+92% complete...
+97% complete...
+93% complete...
+93% complete...
+94% complete...
+98% complete...
+94% complete...
+95% complete...
+99% complete...
+95% complete...
+96% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> g g                                     111 |        4334        589        589 |   4.154e-01  9.355e-03 |
+ | g g -> q qbar (uds)                            112 |          51         12         12 |   1.010e-02  1.347e-03 |
+ | q g -> q g                                     113 |        2760        358        358 |   2.515e-01  7.540e-03 |
+ | q q(bar)' -> q q(bar)'                         114 |         282         34         34 |   2.129e-02  2.071e-03 |
+ | q qbar -> g g                                  115 |           1          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> q' qbar' (uds)                       116 |           1          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> c cbar                                  121 |          14          5          5 |   3.248e-03  7.760e-04 |
+ | q qbar -> c cbar                               122 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> b bbar                                  123 |          18          2          2 |   1.098e-03  3.711e-04 |
+ | q qbar -> b bbar                               124 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |        7461       1000       1000 |   7.027e-01  1.230e-02 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        4652 |
+ | g g -> q qbar (uds)                       112 |          75 |
+ | q g -> q g                                113 |        2022 |
+ | q q(bar)' -> q q(bar)'                    114 |         183 |
+ | q qbar -> g g                             115 |           4 |
+ | q qbar -> q' qbar' (uds)                  116 |           2 |
+ | g g -> c cbar                             121 |          21 |
+ | q qbar -> c cbar                          122 |           0 |
+ | g g -> b bbar                             123 |           4 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           2 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           0 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           0 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           1 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |          12 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           2 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           0 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           0 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           0 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           0 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        6980 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      1   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |      1   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |      3   Warning in Pythia::check: not quite matched particle energy/momentum/mass                              | 
+ |      4   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       181048945 bytes  File  Size =   52412558 *
+*        :          : Tree compression factor =   3.41                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  181048575 bytes  File Size  =   52408074 *
+*Baskets :      440 : Basket Size=   25600000 bytes  Compression=   3.41     *
+*............................................................................*
+97% complete...
+ PYTHIA Error in StringFragmentation::fragment: stuck in joining  
+ PYTHIA Error in Pythia::next: hadronLevel failed; try again  
+96% complete...
+98% complete...
+97% complete...
+99% complete...
+98% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> g g                                     111 |        4107        587        587 |   4.466e-01  9.965e-03 |
+ | g g -> q qbar (uds)                            112 |          60         20         20 |   1.028e-02  1.274e-03 |
+ | q g -> q g                                     113 |        2648        343        343 |   2.441e-01  7.530e-03 |
+ | q q(bar)' -> q q(bar)'                         114 |         309         46         46 |   2.978e-02  2.446e-03 |
+ | q qbar -> g g                                  115 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | q qbar -> q' qbar' (uds)                       116 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> c cbar                                  121 |          10          2          2 |   2.374e-03  6.797e-04 |
+ | q qbar -> c cbar                               122 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> b bbar                                  123 |          11          2          2 |   3.212e-03  1.049e-03 |
+ | q qbar -> b bbar                               124 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |        7145       1000       1000 |   7.363e-01  1.285e-02 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        4746 |
+ | g g -> q qbar (uds)                       112 |          79 |
+ | q g -> q g                                113 |        1989 |
+ | q q(bar)' -> q q(bar)'                    114 |         175 |
+ | q qbar -> g g                             115 |           2 |
+ | q qbar -> q' qbar' (uds)                  116 |           2 |
+ | g g -> c cbar                             121 |          22 |
+ | q qbar -> c cbar                          122 |           0 |
+ | g g -> b bbar                             123 |           5 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           0 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           0 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           1 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           0 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |          10 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           2 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           0 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           0 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           1 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           0 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        7034 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      5   Error in SpaceShower::pT2nearThreshold: stuck in loop                                                  | 
+ |      5   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       181945835 bytes  File  Size =   52506753 *
+*        :          : Tree compression factor =   3.41                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  181945465 bytes  File Size  =   52502168 *
+*Baskets :      447 : Basket Size=   25600000 bytes  Compression=   3.41     *
+*............................................................................*
+99% complete...
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | g g -> g g                                     111 |        4239        595        595 |   4.381e-01  9.642e-03 |
+ | g g -> q qbar (uds)                            112 |          52         15         15 |   8.294e-03  1.175e-03 |
+ | q g -> q g                                     113 |        2670        337        337 |   2.451e-01  7.614e-03 |
+ | q q(bar)' -> q q(bar)'                         114 |         264         37         37 |   2.244e-02  2.146e-03 |
+ | q qbar -> g g                                  115 |           4          2          2 |   5.226e-04  2.259e-04 |
+ | q qbar -> q' qbar' (uds)                       116 |           2          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> c cbar                                  121 |          22          9          9 |   3.215e-03  6.354e-04 |
+ | q qbar -> c cbar                               122 |           0          0          0 |   0.000e+00  0.000e+00 |
+ | g g -> b bbar                                  123 |          19          5          5 |   3.249e-03  6.683e-04 |
+ | q qbar -> b bbar                               124 |           0          0          0 |   0.000e+00  0.000e+00 |
+ |                                                    |                                   |                        |
+ | sum                                                |        7272       1000       1000 |   7.209e-01  1.256e-02 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Multiparton Interactions Statistics  --------*
+ |                                                             |
+ |  Note: excludes hardest subprocess if already listed above  |
+ |                                                             |
+ | Subprocess                               Code |       Times |
+ |                                               |             |
+ |-------------------------------------------------------------|
+ |                                               |             |
+ | g g -> g g                                111 |        4964 |
+ | g g -> q qbar (uds)                       112 |          70 |
+ | q g -> q g                                113 |        2078 |
+ | q q(bar)' -> q q(bar)'                    114 |         195 |
+ | q qbar -> g g                             115 |           4 |
+ | q qbar -> q' qbar' (uds)                  116 |           2 |
+ | g g -> c cbar                             121 |          18 |
+ | q qbar -> c cbar                          122 |           1 |
+ | g g -> b bbar                             123 |           3 |
+ | q qbar -> b bbar                          124 |           0 |
+ | q g -> q gamma (udscb)                    201 |           0 |
+ | q qbar -> g gamma                         202 |           0 |
+ | g g -> g gamma                            203 |           0 |
+ | f fbar -> gamma gamma                     204 |           0 |
+ | g g -> gamma gamma                        205 |           0 |
+ | f f' -> f f' (t-channel gamma*/Z0)        211 |           0 |
+ | f_1 f_2 -> f_3 f_4 (t-channel W+-)        212 |           0 |
+ | f fbar -> f' fbar' (s-channel gamma*)     223 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] g               401 |           0 |
+ | g g -> ccbar(3S1)[3S1(8)] g               402 |           1 |
+ | q g -> ccbar(3S1)[3S1(8)] q               403 |           0 |
+ | q qbar -> ccbar(3S1)[3S1(8)] g            404 |           0 |
+ | g g -> ccbar(3S1)[1S0(8)] g               405 |           0 |
+ | q g -> ccbar(3S1)[1S0(8)] q               406 |           0 |
+ | q qbar -> ccbar(3S1)[1S0(8)] g            407 |           0 |
+ | g g -> ccbar(3S1)[3PJ(8)] g               408 |           0 |
+ | q g -> ccbar(3S1)[3PJ(8)] q               409 |           0 |
+ | q qbar -> ccbar(3S1)[3PJ(8)] g            410 |           0 |
+ | g g -> ccbar(3PJ)[3PJ(1)] g               411 |           3 |
+ | q g -> ccbar(3PJ)[3PJ(1)] q               412 |           1 |
+ | q qbar -> ccbar(3PJ)[3PJ(1)] g            413 |           0 |
+ | g g -> ccbar(3PJ)[3S1(8)] g               414 |           0 |
+ | q g -> ccbar(3PJ)[3S1(8)] q               415 |           0 |
+ | q qbar -> ccbar(3PJ)[3S1(8)] g            416 |           0 |
+ | g g -> ccbar(3DJ)[3DJ(1)] g               417 |           0 |
+ | g g -> ccbar(3DJ)[3PJ(8)] g               418 |           0 |
+ | q g -> ccbar(3DJ)[3PJ(8)] q               419 |           0 |
+ | q qbar -> ccbar(3DJ)[3PJ(8)] g            420 |           0 |
+ | g g -> ccbar(3S1)[3S1(1)] gamma           441 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] g               501 |           1 |
+ | g g -> bbbar(3S1)[3S1(8)] g               502 |           0 |
+ | q g -> bbbar(3S1)[3S1(8)] q               503 |           0 |
+ | q qbar -> bbbar(3S1)[3S1(8)] g            504 |           0 |
+ | g g -> bbbar(3S1)[1S0(8)] g               505 |           1 |
+ | q g -> bbbar(3S1)[1S0(8)] q               506 |           0 |
+ | q qbar -> bbbar(3S1)[1S0(8)] g            507 |           0 |
+ | g g -> bbbar(3S1)[3PJ(8)] g               508 |           0 |
+ | q g -> bbbar(3S1)[3PJ(8)] q               509 |           0 |
+ | q qbar -> bbbar(3S1)[3PJ(8)] g            510 |           0 |
+ | g g -> bbbar(3PJ)[3PJ(1)] g               511 |           1 |
+ | q g -> bbbar(3PJ)[3PJ(1)] q               512 |           0 |
+ | q qbar -> bbbar(3PJ)[3PJ(1)] g            513 |           0 |
+ | g g -> bbbar(3PJ)[3S1(8)] g               514 |           0 |
+ | q g -> bbbar(3PJ)[3S1(8)] q               515 |           0 |
+ | q qbar -> bbbar(3PJ)[3S1(8)] g            516 |           0 |
+ | g g -> bbbar(3S1)[3S1(1)] gamma           551 |           0 |
+ |                                                             |
+ | sum                                           |        7343 |
+ |                                               |             |
+ *-------  End PYTHIA Multiparton Interactions Statistics -----*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      1   Error in Pythia::next: hadronLevel failed; try again                                                   | 
+ |      1   Error in StringFragmentation::fragment: stuck in joining                                               | 
+ |      4   Warning in StringFragmentation::fragmentToJunction: bad convergence junction rest frame                | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+******************************************************************************
+*Tree    :Pythia    : Pythia                                                 *
+*Entries :     1099 : Total =       188886999 bytes  File  Size =   52513695 *
+*        :          : Tree compression factor =   3.42                       *
+******************************************************************************
+*Br    0 :Event     : TClonesArray                                           *
+*Entries :     1099 : Total  Size=  188886629 bytes  File Size  =   52509238 *
+*Baskets :      439 : Basket Size=   25600000 bytes  Compression=   3.42     *
+*............................................................................*
+GEN stage completed successfully
+hadd Target file: /data/cpapage/jet-gen8K.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: /data/cpapage/jet0-gen8.root
+hadd Source file 2: /data/cpapage/jet1-gen8.root
+hadd Source file 3: /data/cpapage/jet2-gen8.root
+hadd Source file 4: /data/cpapage/jet3-gen8.root
+hadd Source file 5: /data/cpapage/jet4-gen8.root
+hadd Source file 6: /data/cpapage/jet5-gen8.root
+hadd Source file 7: /data/cpapage/jet6-gen8.root
+hadd Source file 8: /data/cpapage/jet7-gen8.root
+hadd Target path: /data/cpapage/jet-gen8K.root:/
+run `root -l /data/cpapage/jet-gen8K.root' to view results

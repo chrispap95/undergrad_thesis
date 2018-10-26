@@ -1,0 +1,329 @@
+#ifndef __CINT__
+#include <TMath.h>
+#include <TTree.h>
+#include <TFile.h>
+#include <TClonesArray.h>
+#include <TParticle.h>
+#endif
+
+void generator_count_events() {
+	TStopwatch t;
+	Int_t count_b1 = 0;
+	Int_t count_b2 = 0;
+
+	//Insert the .root file and get the tree and its Event branch
+        TFile* f1 = TFile::Open("/data/cpapage/jpsiInclusive-gen8K.root");
+        TTree* t1 = dynamic_cast< TTree* >(f1->Get("Pythia"));
+        TClonesArray* particles1 = new TClonesArray("Event");
+        t1->SetBranchAddress("Event", &particles1);
+        for (Long64_t i = 0; i < t1->GetEntries(); ++i) { // This is the Event loop 
+                t1->GetEntry(i);
+                for (Long64_t l = 0; l < particles1->GetEntries(); ++l) { //This is a particle loop
+                        TParticle* part = reinterpret_cast< TParticle* >(particles1->At(l));
+			Bool_t cut1 = part->Eta() < 2.4 && part->Eta() > -2.4 && part->Pt() > 10;
+			if (part->GetPdgCode() == 111 && cut1) {
+				// Float_t isolation = 0;
+				// for (Long64_t k = 0; k < particles1->GetEntries(); ++k) {
+				// 	TParticle* candidate = reinterpret_cast< TParticle* >(particles1->At(k));
+				// 	// Bool_t cut2 = candidate->Eta() < 2.4 && candidate->Eta() > -2.4;
+				// 	if (candidate->GetStatusCode() > 0) {
+				// 		Float_t DeltaPhi;
+				// 		Float_t DeltaPhip = part->Phi()-candidate->Phi();
+				// 		Float_t DeltaPhim = abs(part->Phi()-candidate->Phi()-TMath::TwoPi());
+				// 		Float_t DeltaEta = part->Eta()-candidate->Eta();
+				// 		if (DeltaPhip > DeltaPhim) DeltaPhi = DeltaPhim;
+				// 		else DeltaPhi = DeltaPhip;
+				// 		Float_t DeltaR = sqrt(DeltaPhi*DeltaPhi+DeltaEta*DeltaEta);
+				// 		TParticlePDG* candpdg = candidate->GetPDG(0);
+				// 		if (DeltaR < 0.4 && k!=l && candpdg) {
+				// 			Float_t pt = candidate->Pt();
+				// 			Float_t mass = candidate->GetMass();
+				// 			Float_t Et = sqrt(pt*pt+mass*mass);
+				// 			isolation += Et;
+				// 			if (candpdg->Charge()!=0) isolation += pt;
+				// 		}
+				// 	}
+				// }
+				
+				if (1) {// isolation < 10) {
+					Int_t iJpsi = 0;
+					for (Int_t iJpsi = 0; iJpsi < particles1->GetEntries(); ++iJpsi) {
+						TParticle* part = reinterpret_cast< TParticle* >(particles1->At(l));
+						if (part->GetPdgCode() == 443) {
+							iJpsi = l;
+							break;
+						}
+					}
+					while (1) {    //Find the last Jpsi
+						TParticle* part = reinterpret_cast< TParticle* >(particles1->At(iJpsi));
+						Int_t daughter0id = part->GetDaughter(0);
+						Int_t daughter1id = part->GetDaughter(1);
+						Bool_t daughter0validity = true;
+						Bool_t daughter1validity = true;
+						if (daughter0id >= 0) {//Check that daughter exists
+							TParticle* daughter0 = reinterpret_cast< TParticle* >(particles1->At(daughter0id));
+							if (daughter0->GetPdgCode() == 443) {//If daughter is still J/psi then repeat
+								iJpsi = part->GetDaughter(0);
+								daughter0validity = false;
+								continue;
+							}
+						}
+						if (daughter1id >= 0) {
+							TParticle* daughter1 = reinterpret_cast< TParticle* >(particles1->At(daughter1id));
+							if (daughter1->GetPdgCode() == 443) {
+								iJpsi = part->GetDaughter(1);
+								daughter1validity = false;
+								continue;
+							}
+						}
+						if (daughter0validity && daughter1validity) break;
+					}
+					
+					Int_t iMuon = iJpsi;
+					while (1) {    //Find the last Muon
+						TParticle* part = reinterpret_cast< TParticle* >(particles1->At(iMuon));
+						Int_t daughter0id = part->GetDaughter(0);
+						Int_t daughter1id = part->GetDaughter(1);
+						Bool_t daughter0validity = true;
+						Bool_t daughter1validity = true;
+						if (daughter0id >= 0) {
+							TParticle* daughter0 = reinterpret_cast< TParticle* >(particles1->At(daughter0id));
+							if (daughter0->GetPdgCode() == 13) {
+								iMuon = part->GetDaughter(0);
+								daughter0validity = false;
+								continue;
+							}
+						}
+						if (daughter1id >= 0) {
+							TParticle* daughter1 = reinterpret_cast< TParticle* >(particles1->At(daughter1id));
+							if (daughter1->GetPdgCode() == 13) {
+								iMuon = part->GetDaughter(1);
+								daughter1validity = false;
+								continue;
+							}
+						}
+						if (daughter0validity && daughter1validity) break;
+					}
+
+					Int_t iAntimuon = iJpsi;
+					while (1) {    //Find the last Antimuon
+						TParticle* part = reinterpret_cast< TParticle* >(particles1->At(iAntimuon));
+						Int_t daughter0id = part->GetDaughter(0);
+						Int_t daughter1id = part->GetDaughter(1);
+						Bool_t daughter0validity = true;
+						Bool_t daughter1validity = true;
+						if (daughter0id >= 0) {
+							TParticle* daughter0 = reinterpret_cast< TParticle* >(particles1->At(daughter0id));
+							if (daughter0->GetPdgCode() == -13) {
+								iAntimuon = part->GetDaughter(0);
+								daughter0validity = false;
+								continue;
+							}
+						}
+						if (daughter1id >= 0) {
+							TParticle* daughter1 = reinterpret_cast< TParticle* >(particles1->At(daughter1id));
+							if (daughter1->GetPdgCode() == -13) {
+								iAntimuon = part->GetDaughter(1);
+								daughter1validity = false;
+								continue;
+							}
+						}
+						if (daughter0validity && daughter1validity) break;
+					}			
+					
+					TParticle* muon = reinterpret_cast< TParticle* >(particles1->At(iMuon));
+					TParticle* antimuon = reinterpret_cast< TParticle* >(particles1->At(iAntimuon));
+					Bool_t cut_muon = muon->Pt() > 10 && muon->Eta() > -2.4 && muon->Eta() < 2.4;
+					Bool_t cut_antimuon = antimuon->Pt() > 10 && antimuon->Eta() > -2.4 && antimuon->Eta() < 2.4;
+					if (cut_muon && cut_antimuon) ++count_b1;
+					++count_b2;
+
+					// Bool_t muonb = 0;
+					// for (Int_t iMuon = 0; iMuon < particles1->GetEntries(); ++iMuon) {
+					// 	TParticle* part = reinterpret_cast< TParticle* >(particles1->At(iMuon));
+					// 	Bool_t cutmu = part->Eta() < 2.4 && part->Eta() > -2.4 && part->Pt() > 10;
+					// 	if (part->GetPdgCode() == 13 && cutmu) {
+					// 		muonb = 1;
+					// 		break;
+					// 	}
+					// }
+					// if (muonb) {
+					// 	for (Int_t iMuon = 0; iMuon < particles1->GetEntries(); ++iMuon) {
+					// 		TParticle* part = reinterpret_cast< TParticle* >(particles1->At(iMuon));
+					// 		Bool_t cutmu = part->Eta() < 2.4 && part->Eta() > -2.4 && part->Pt() > 10;
+					// 		if (part->GetPdgCode() == -13 && cutmu) {
+					// 			++count_b;
+					// 			break;
+					// 		}
+					// 	}
+					// }
+				}
+			}
+		}
+	}
+
+	// //Insert the .root file and get the tree and its Event branch
+        // TFile* f2 = TFile::Open("/data/cpapage/higgsTojpsiGamma-gen8K.root");
+        // TTree* t2 = dynamic_cast< TTree* >(f2->Get("Pythia"));
+        // TClonesArray* particles2 = new TClonesArray("Event");
+        // t2->SetBranchAddress("Event", &particles2);
+        // for (Long64_t i = 0; i < t2->GetEntries(); ++i) { // This is like the Event loop 
+        //         t2->GetEntry(i);
+
+	// 	Int_t iHiggs = 0;
+	// 	Int_t iGamma = 0;
+	// 	Int_t iJpsi = 0;
+	// 	Int_t iMuon = 0;
+	// 	Int_t iAntiMuon = 0;
+
+        //         for (Long64_t l = 0; l < particles2->GetEntries(); ++l) { //This is a particle loop
+        //                 TParticle* part = reinterpret_cast< TParticle* >(particles2->At(l));
+	// 		if (part->GetPdgCode() == 25) {
+	// 			iHiggs = l;
+	// 			break;
+	// 		}
+	// 	}
+	// 	while (1) {    //Find the last Higgs
+	// 		TParticle* part = reinterpret_cast< TParticle* >(particles2->At(iHiggs));
+	// 	        Int_t daughter0id = part->GetDaughter(0);
+	// 	        Int_t daughter1id = part->GetDaughter(1);
+	// 		Bool_t daughter0validity = true;
+	// 		Bool_t daughter1validity = true;
+	// 		if (daughter0id >= 0) {
+	// 			TParticle* daughter0 = reinterpret_cast< TParticle* >(particles2->At(daughter0id));
+	// 			if (daughter0->GetPdgCode() == 25) {
+	// 				iHiggs = part->GetDaughter(0);
+	// 				daughter0validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter1id >= 0) {
+	// 			TParticle* daughter1 = reinterpret_cast< TParticle* >(particles2->At(daughter1id));
+	// 			if (daughter1->GetPdgCode() == 25) {
+	// 				iHiggs = part->GetDaughter(1);
+	// 				daughter1validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter0validity && daughter1validity) break;
+	// 	}
+	
+	// 	iGamma = iHiggs;
+	// 	while (1) {    //Find the last gamma
+	// 		TParticle* part = reinterpret_cast< TParticle* >(particles2->At(iGamma));
+	// 	        Int_t daughter0id = part->GetDaughter(0);
+	// 	        Int_t daughter1id = part->GetDaughter(1);
+	// 		Bool_t daughter0validity = true;
+	// 		Bool_t daughter1validity = true;
+	// 		if (daughter0id >= 0) {
+	// 			TParticle* daughter0 = reinterpret_cast< TParticle* >(particles2->At(daughter0id));
+	// 			if (daughter0->GetPdgCode() == 22) {
+	// 				iGamma = part->GetDaughter(0);
+	// 				daughter0validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter1id >= 0) {
+	// 			TParticle* daughter1 = reinterpret_cast< TParticle* >(particles2->At(daughter1id));
+	// 			if (daughter1->GetPdgCode() == 22) {
+	// 				iGamma = part->GetDaughter(1);
+	// 				daughter1validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter0validity && daughter1validity) break;
+	// 	}
+
+	// 	iJpsi = iHiggs;
+	// 	while (1) {    //Find the last J/psi
+	// 		TParticle* part = reinterpret_cast< TParticle* >(particles2->At(iJpsi));
+	// 	        Int_t daughter0id = part->GetDaughter(0);
+	// 	        Int_t daughter1id = part->GetDaughter(1);
+	// 		Bool_t daughter0validity = true;
+	// 		Bool_t daughter1validity = true;
+	// 		if (daughter0id >= 0) {
+	// 			TParticle* daughter0 = reinterpret_cast< TParticle* >(particles2->At(daughter0id));
+	// 			if (daughter0->GetPdgCode() == 443) {
+	// 				iJpsi = part->GetDaughter(0);
+	// 				daughter0validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter1id >= 0) {
+	// 			TParticle* daughter1 = reinterpret_cast< TParticle* >(particles2->At(daughter1id));
+	// 			if (daughter1->GetPdgCode() == 443) {
+	// 				iJpsi = part->GetDaughter(1);
+	// 				daughter1validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter0validity && daughter1validity) break;
+	// 	}
+
+	// 	iMuon = iJpsi;
+	// 	while (1) {    //Find the last Muon
+	// 		TParticle* part = reinterpret_cast< TParticle* >(particles2->At(iMuon));
+	// 	        Int_t daughter0id = part->GetDaughter(0);
+	// 	        Int_t daughter1id = part->GetDaughter(1);
+	// 		Bool_t daughter0validity = true;
+	// 		Bool_t daughter1validity = true;
+	// 		if (daughter0id >= 0) {
+	// 			TParticle* daughter0 = reinterpret_cast< TParticle* >(particles2->At(daughter0id));
+	// 			if (daughter0->GetPdgCode() == 13) {
+	// 				iMuon = part->GetDaughter(0);
+	// 				daughter0validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter1id >= 0) {
+	// 			TParticle* daughter1 = reinterpret_cast< TParticle* >(particles2->At(daughter1id));
+	// 			if (daughter1->GetPdgCode() == 13) {
+	// 				iMuon = part->GetDaughter(1);
+	// 				daughter1validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter0validity && daughter1validity) break;
+	// 	}
+
+	// 	iAntiMuon = iJpsi;
+	// 	while (1) {    //Find the last Antimuon
+	// 		TParticle* part = reinterpret_cast< TParticle* >(particles2->At(iAntiMuon));
+	// 	        Int_t daughter0id = part->GetDaughter(0);
+	// 	        Int_t daughter1id = part->GetDaughter(1);
+	// 		Bool_t daughter0validity = true;
+	// 		Bool_t daughter1validity = true;
+	// 		if (daughter0id >= 0) {
+	// 			TParticle* daughter0 = reinterpret_cast< TParticle* >(particles2->At(daughter0id));
+	// 			if (daughter0->GetPdgCode() == -13) {
+	// 				iAntiMuon = part->GetDaughter(0);
+	// 				daughter0validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter1id >= 0) {
+	// 			TParticle* daughter1 = reinterpret_cast< TParticle* >(particles2->At(daughter1id));
+	// 			if (daughter1->GetPdgCode() == -13) {
+	// 				iAntiMuon = part->GetDaughter(1);
+	// 				daughter1validity = false;
+	// 				continue;
+	// 			}
+	// 		}
+	// 		if (daughter0validity && daughter1validity) break;
+	// 	}
+
+
+	// 	TParticle* Gamma = reinterpret_cast< TParticle* >(particles2->At(iGamma));
+	// 	TParticle* Muon = reinterpret_cast< TParticle* >(particles2->At(iMuon));
+	// 	TParticle* AntiMuon = reinterpret_cast< TParticle* >(particles2->At(iAntiMuon));
+	// 	Bool_t cut1 = Gamma->Eta() < 2.4 && Gamma->Eta() > -2.4 && Gamma->Pt()>10;
+	// 	Bool_t cut2 = Muon->Eta() < 2.4 && Muon->Eta() > -2.4 && Muon->Pt()>10;
+	// 	Bool_t cut3 = AntiMuon->Eta() < 2.4 && AntiMuon->Eta() > -2.4 && AntiMuon->Pt()>10;
+	// 	if (cut1 && cut2 && cut3) ++count_s;	
+	// }
+
+	cout << "bkg cuts : " << count_b1 << endl;
+	cout << "bkg : " << count_b2 << endl;
+	t.Stop();
+	t.Print();
+}

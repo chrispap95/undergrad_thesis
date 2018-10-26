@@ -1,0 +1,431 @@
+
+Processing generator_mass_2_cuts.cpp...
+Warning in <EnableImplicitMT>: Cannot enable implicit multi-threading with 4 threads, please build ROOT with -Dimt=ON
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Warning in <EnableImplicitMT>: Cannot enable implicit multi-threading with 4 threads, please build ROOT with -Dimt=ON
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Warning in <EnableImplicitMT>: Cannot enable implicit multi-threading with 4 threads, please build ROOT with -Dimt=ON
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Warning in <EnableImplicitMT>: Cannot enable implicit multi-threading with 4 threads, please build ROOT with -Dimt=ON
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S/B = 0.000716644
+S/sqrt(B) = 0.0822846
+Info in <TCanvas::Print>: pdf file generator_mass_2_100K_cuts_new.pdf has been created using the current canvas
+Info in <TCanvas::Print>: Current canvas added to pdf file generator_mass_2_100K_cuts_new.pdf and file closed
+Real time 2:05:59, CP time 7397.650
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S/B = 0.139054
+S/sqrt(B) = 1.14619
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S/B = 0.237966
+S/sqrt(B) = 1.51237
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S/B = 0.748049
+S/sqrt(B) = 2.68142
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+#0  0x00007f21cc33717c in waitpid () from /lib64/libc.so.6
+#1  0x00007f21cc2b4e52 in do_system () from /lib64/libc.so.6
+#2  0x00007f21cd28787f in TUnixSystem::StackTrace() () from /expsoft/ROOT/6.12.04-native/lib/root/libCore.so
+#3  0x00007f21c816e575 in cling::MultiplexInterpreterCallbacks::PrintStackTrace() () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#4  0x00007f21c82200ad in cling_runtime_internal_throwIfInvalidPointer () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#5  0x00007f21cd7a7ed1 in ?? ()
+#6  0x41a0000002000000 in ?? ()
+#7  0x000000000109f1d0 in ?? ()
+#8  0x0000000004734fa8 in ?? ()
+#9  0x00007f21c8220010 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#10 0x000000000109f1d0 in ?? ()
+#11 0x0000000004734e60 in ?? ()
+#12 0x00007ffce7546000 in ?? ()
+#13 0x00007f21c8220010 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#14 0x0000000000001268 in ?? ()
+#15 0x00007ffce7546000 in ?? ()
+#16 0x00007ffce75462d0 in ?? ()
+#17 0x00007f21cd7a06ca in ?? ()
+#18 0x0000000004c0f350 in ?? ()
+#19 0x00007ffce7545ab0 in ?? ()
+#20 0x0000000004b8c8e0 in ?? ()
+#21 0x0000000000000000 in ?? ()
+Error in <HandleInterpreterException>: Trying to access a pointer that points to an invalid memory address..
+Execution of your code was aborted.
+In file included from /expsoft/src/root-6.12.04/input_line_7:1:
+In file included from /expsoft/src/root-6.12.04/include/Rtypes.h:188:
+In file included from /expsoft/src/root-6.12.04/include/TGenericClassInfo.h:15:
+In file included from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/vector:64:
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/bits/stl_vector.h:771:17: warning: invalid memory pointer passed to a callee:
+      { return *(this->_M_impl._M_start + __n); }
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S/B = 0.0561293
+S/sqrt(B) = 0.743402
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S/B = 0.766278
+S/sqrt(B) = 2.74677
+Info in <TCanvas::Print>: eps file generator_mass_2_100K_cuts_new1.eps has been created
+Info in <TCanvas::Print>: eps file generator_mass_2_100K_cuts_new2.eps has been created
+Real time 1:47:28, CP time 6290.040
+
+Processing generator_dphi_check.cpp...
+In file included from input_line_18:1:
+/home/cpapage/src/multicpu/generator_mass_2/generator_dphi_check.cpp:111:18: error: use of undeclared identifier 'jspi'
+                        Bool_t cut6 = jspi->Pt() > 36;
+                                      ^
+/home/cpapage/src/multicpu/generator_mass_2/generator_dphi_check.cpp:227:17: error: use of undeclared identifier 'jspi'
+                Bool_t cut6 = jspi->Pt() > 36;
+                              ^
+
+Processing generator_dphi_check.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Real time 1:52:43, CP time 6615.920
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S = 9.87507
+B = 16.5905
+S/B = 0.595226
+S/sqrt(B) = 2.42444
+Info in <TCanvas::Print>: eps file generator_mass_2_100K_cuts_new1.eps has been created
+Info in <TCanvas::Print>: eps file generator_mass_2_100K_cuts_new2.eps has been created
+Real time 1:47:37, CP time 6291.200
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S = 8.50596
+B = 0.762394
+S/B = 11.1569
+S/sqrt(B) = 9.74168
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S = 10.079
+B = 1260.85
+S/B = 0.0079938
+S/sqrt(B) = 0.283847
+Real time 1:47:16, CP time 6302.470
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_mass_2_cuts.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+S = 20.5075
+B = 1260.85
+S/B = 0.0162648
+S/sqrt(B) = 0.577539
+Real time 1:46:53, CP time 6279.540
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+

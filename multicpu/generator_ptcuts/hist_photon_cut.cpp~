@@ -1,0 +1,4 @@
+{
+	TFile* f = TFile::Open("photon_cut.root");
+	TH1D* hcounts = (TH1D*)(f->Get("hcounts"));
+	TH1D* hcountb = (TH1D*)(f->Get("hcountb"));

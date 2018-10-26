@@ -1,0 +1,882 @@
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: pdf file generator_jet_ratio_low_pt40_200K.pdf has been created
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+#0  0x00007f2a5730d17c in waitpid () from /lib64/libc.so.6
+#1  0x00007f2a5728ae52 in do_system () from /lib64/libc.so.6
+#2  0x00007f2a5825d87f in TUnixSystem::StackTrace() () from /expsoft/ROOT/6.12.04-native/lib/root/libCore.so
+#3  0x00007f2a5825ffac in TUnixSystem::DispatchSignals(ESignals) () from /expsoft/ROOT/6.12.04-native/lib/root/libCore.so
+#4  <signal handler called>
+#5  0x00007f2a5760ed08 in main_arena () from /lib64/libc.so.6
+#6  0x00007f2a4bf48cc1 in ?? ()
+#7  0x0000000000000001 in ?? ()
+#8  0x00007f2a585a9729 in check_match.9524 () from /lib64/ld-linux-x86-64.so.2
+#9  0x00007f2a585a9f2b in do_lookup_x () from /lib64/ld-linux-x86-64.so.2
+#10 0x0000000007d52088 in ?? ()
+#11 0x0000000007f9f060 in ?? ()
+#12 0x0000000007fadd00 in ?? ()
+#13 0x0000000007fadd00 in ?? ()
+#14 0x0000000007f9f060 in ?? ()
+#15 0x0000000007d52160 in ?? ()
+#16 0x0000000007d52160 in ?? ()
+#17 0x0000000007f9f060 in ?? ()
+#18 0x0000000007f9f060 in ?? ()
+#19 0x0000000007f9f060 in ?? ()
+#20 0x0000000007f9f060 in ?? ()
+#21 0x00000000079a2050 in ?? ()
+#22 0x0000000007f9f060 in ?? ()
+#23 0x00007f2a496017c0 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libGpad.so
+#24 0x0000000007f9f060 in ?? ()
+#25 0x0000000007d52010 in ?? ()
+#26 0x40b7f20000000000 in ?? ()
+#27 0x0000001cffffffff in ?? ()
+#28 0x0000000007d51940 in ?? ()
+#29 0x0000000007d51940 in ?? ()
+#30 0x00007f2a49fd8c40 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#31 0x0000000007d51940 in ?? ()
+#32 0x00007f2a531f6010 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#33 0x0000000007d51940 in ?? ()
+#34 0x0000000007d52160 in ?? ()
+#35 0x00007f2a49ff9e50 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#36 0x0000000007d51940 in ?? ()
+#37 0x00007f2a531f6010 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#38 0x0000000007d52160 in ?? ()
+#39 0x0000000007d52160 in ?? ()
+#40 0x0000000007d52010 in ?? ()
+#41 0x0000000007d52088 in ?? ()
+#42 0x0000000007d52088 in ?? ()
+#43 0x0000000007d52010 in ?? ()
+#44 0x0000000000665c50 in ?? ()
+#45 0x000000000067e0a0 in ?? ()
+#46 0x00007f2a54d3cee4 in llvm::sys::DynamicLibrary::SearchForAddressOfSymbol(char const*) () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#47 0x00007ffcd84ea5d8 in ?? ()
+#48 0x00007ffcd84ea598 in ?? ()
+#49 0x00007ffcd84ea588 in ?? ()
+#50 0x00007ffcd84ea578 in ?? ()
+#51 0x00007ffcd84ea560 in ?? ()
+#52 0x000000000590d328 in ?? ()
+#53 0x00007ffcd84ea540 in ?? ()
+#54 0x00007ffcd84ea1b0 in ?? ()
+#55 0x00007ffcd84ea280 in ?? ()
+#56 0x00007f2a5317d430 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#57 0x00007f2a5317d661 in std::_Function_base::_Base_manager<llvm::orc::RTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>, std::shared_ptr<llvm::JITSymbolResolver>, llvm::orc::RTDyldObjectLinkingLayer::addObject(std::shared_ptr<llvm::object::OwningBinary<llvm::object::ObjectFile> >, std::shared_ptr<llvm::JITSymbolResolver>)::{lambda(std::_List_iterator<std::unique_ptr<llvm::orc::RTDyldObjectLinkingLayerBase::LinkedObject, std::default_delete<llvm::orc::RTDyldObjectLinkingLayerBase::LinkedObject> > >, llvm::RuntimeDyld&, std::shared_ptr<llvm::object::OwningBinary<llvm::object::ObjectFile> > const&, std::function<void ()>)#1}>::getSymbolMaterializer(std::string)::{lambda()#1}>::_M_manager(std::_Any_data&, llvm::orc::RTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>, std::shared_ptr<llvm::JITSymbolResolver>, llvm::orc::RTDyldObjectLinkingLayer::addObject(std::shared_ptr<llvm::object::OwningBinary<llvm::object::ObjectFile> >, std::shared_ptr<llvm::JITSymbolResolver>)::{lambda(std::_List_iterator<std::unique_ptr<llvm::orc::RTDyldObjectLinkingLayerBase::LinkedObject, std::default_delete<llvm::orc::RTDyldObjectLinkingLayerBase::LinkedObject> > >, llvm::RuntimeDyld&, std::shared_ptr<llvm::object::OwningBinary<llvm::object::ObjectFile> > const&, std::function<void ()>)#1}>::getSymbolMaterializer(std::string)::{lambda()#1} const&, std::_Manager_operation) () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#58 0x0000000000690a60 in ?? ()
+#59 0x0000000000610a10 in ?? ()
+#60 0x0000000000610a18 in ?? ()
+#61 0x00007f2a570450c0 in ?? () from /lib64/libdl.so.2
+#62 0x00007f2a570450d4 in dlsym_doit () from /lib64/libdl.so.2
+#63 0x00007f2a585af914 in _dl_catch_error () from /lib64/ld-linux-x86-64.so.2
+#64 0x00007f2a581f7580 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCore.so
+#65 0x00000000079e4a90 in ?? ()
+#66 0x00007f2a4bf4ca60 in ?? ()
+#67 0x00000000079e4a90 in ?? ()
+#68 0x0000000000000013 in ?? ()
+#69 0x00007ffcd84ea540 in ?? ()
+#70 0x0000002a074fbe38 in ?? ()
+#71 0x404740a2ffbdb252 in ?? ()
+#72 0x0000000007f469c0 in ?? ()
+#73 0x00007f2a49fed330 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#74 0x0000000007d51940 in ?? ()
+#75 0x00007f2a4bf4ca60 in ?? ()
+#76 0x0000000007d51940 in ?? ()
+#77 0x00007ffcd84ea540 in ?? ()
+#78 0x0000000007f469c0 in ?? ()
+#79 0x0000000000000001 in ?? ()
+#80 0x00007ffcd84ea560 in ?? ()
+#81 0x00007ffcd84ea708 in ?? ()
+#82 0x00007ffcd84ea5a8 in ?? ()
+#83 0x0000000005d04890 in ?? ()
+#84 0x00007f2a5317a0e0 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#85 0x00007ffcd84ea5c0 in ?? ()
+#86 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#87 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#88 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#89 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#90 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#91 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#92 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#93 0x00007ffcd84ea3f0 in ?? ()
+#94 0x00007ffcd84ea3d0 in ?? ()
+#95 0x00007ffcd84ea788 in ?? ()
+#96 0x00000000074c76f0 in ?? ()
+#97 0x0000000007fb0d60 in ?? ()
+#98 0x00007f2a4bf4ca60 in ?? ()
+#99 0x00007ffcd84ea788 in ?? ()
+#100 0x3fb9407271cbc289 in ?? ()
+#101 0x0000000007e5cc00 in ?? ()
+#102 0xbface61d1b01ccae in ?? ()
+#103 0x0000000007e5cc00 in ?? ()
+#104 0x3fac45f6fa75b8fe in ?? ()
+#105 0x0000000007e5cc00 in ?? ()
+#106 0x3fae444ba32f6f48 in ?? ()
+#107 0x0000000007e5cc00 in ?? ()
+#108 0x0000000100000035 in ?? ()
+#109 0x0000000007e5cc00 in ?? ()
+#110 0x0000000007e5cc00 in ?? ()
+#111 0x00000000079e4a90 in ?? ()
+#112 0x0000042658779000 in ?? ()
+#113 0x00000000079e4a90 in ?? ()
+#114 0x000223d500000426 in ?? ()
+#115 0x000000000787ec00 in ?? ()
+#116 0x0000000000031058 in ?? ()
+#117 0x000000000787ec00 in ?? ()
+#118 0x0000000000031058 in ?? ()
+#119 0x00007f2a4aa92bc0 in ?? () from /expsoft/Delphes-3.4.1/libDelphes.so
+#120 0x0000000007d52010 in ?? ()
+#121 0x00007f2a49fe8f80 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#122 0x0000000007d52010 in ?? ()
+#123 0x0000000007d51940 in ?? ()
+#124 0x00007f2a49fe8f80 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#125 0x0000000007d51940 in ?? ()
+#126 0x00000000079a2050 in ?? ()
+#127 0x00007f2a49613e10 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libGpad.so
+#128 0x0000000154928c65 in ?? ()
+#129 0x00000000079a2050 in ?? ()
+#130 0x000000005760e760 in ?? ()
+#131 0x000000000787ec00 in ?? ()
+#132 0x00000000079e4a90 in ?? ()
+#133 0x00007f2a581fda90 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCore.so
+#134 0x00000000075315f8 in ?? ()
+#135 0x00000000079e4a90 in ?? ()
+#136 0x000000000787ec00 in ?? ()
+#137 0x00007f2a57aa4070 in ?? () from /lib64/libstdc++.so.6
+#138 0x000000000787ec00 in ?? ()
+#139 0x0000000007844bf0 in ?? ()
+#140 0x0000000007844bf0 in ?? ()
+#141 0x00007f2a55cf5120 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libRIO.so
+#142 0x00000001d84ea4ef in ?? ()
+#143 0x000000000787ec00 in ?? ()
+#144 0x0000000007f9f060 in ?? ()
+#145 0x00000000074c76f0 in ?? ()
+#146 0x00000000074c76f0 in ?? ()
+#147 0x00000000074c76f0 in ?? ()
+#148 0x0000000007e474f0 in ?? ()
+#149 0x0000000007fa3f80 in ?? ()
+#150 0x0000000007fa4608 in ?? ()
+#151 0x0000000007fa4608 in ?? ()
+#152 0x0000000007e47d30 in ?? ()
+#153 0x00007f2a5317d430 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#154 0x0000023effffffff in ?? ()
+#155 0x0000000007e553b0 in ?? ()
+#156 0x000000135317dbc8 in ?? ()
+#157 0x0000000007fa4a70 in ?? ()
+#158 0x0000000007fa50f8 in ?? ()
+#159 0x0000000007fa5570 in ?? ()
+#160 0x0000000154941416 in ?? ()
+#161 0x0000000007f469c0 in ?? ()
+#162 0x0000000007f46a18 in ?? ()
+#163 0x0000000007f46a18 in ?? ()
+#164 0x00007f2a4adc05f0 in vtable for fastjet::Selector () from /expsoft/Delphes-3.4.1/libDelphes.so
+#165 0x0000000007e7c930 in ?? ()
+#166 0x00007f2a4adc05f0 in vtable for fastjet::Selector () from /expsoft/Delphes-3.4.1/libDelphes.so
+#167 0x00000000079a0080 in ?? ()
+#168 0x00007f2a4adc05f0 in vtable for fastjet::Selector () from /expsoft/Delphes-3.4.1/libDelphes.so
+#169 0x000000000799d020 in ?? ()
+#170 0x0000000000000000 in ?? ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+You may get help by asking at the ROOT forum http://root.cern.ch/forum.
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  0x00007f2a5760ed08 in main_arena () from /lib64/libc.so.6
+#6  0x00007f2a4bf48cc1 in ?? ()
+#7  0x0000000000000001 in ?? ()
+#8  0x00007f2a585a9729 in check_match.9524 () from /lib64/ld-linux-x86-64.so.2
+#9  0x00007f2a585a9f2b in do_lookup_x () from /lib64/ld-linux-x86-64.so.2
+#10 0x0000000007d52088 in ?? ()
+#11 0x0000000007f9f060 in ?? ()
+#12 0x0000000007fadd00 in ?? ()
+#13 0x0000000007fadd00 in ?? ()
+#14 0x0000000007f9f060 in ?? ()
+#15 0x0000000007d52160 in ?? ()
+#16 0x0000000007d52160 in ?? ()
+#17 0x0000000007f9f060 in ?? ()
+#18 0x0000000007f9f060 in ?? ()
+#19 0x0000000007f9f060 in ?? ()
+#20 0x0000000007f9f060 in ?? ()
+#21 0x00000000079a2050 in ?? ()
+#22 0x0000000007f9f060 in ?? ()
+#23 0x00007f2a496017c0 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libGpad.so
+#24 0x0000000007f9f060 in ?? ()
+#25 0x0000000007d52010 in ?? ()
+#26 0x40b7f20000000000 in ?? ()
+#27 0x0000001cffffffff in ?? ()
+#28 0x0000000007d51940 in ?? ()
+#29 0x0000000007d51940 in ?? ()
+#30 0x00007f2a49fd8c40 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#31 0x0000000007d51940 in ?? ()
+#32 0x00007f2a531f6010 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#33 0x0000000007d51940 in ?? ()
+#34 0x0000000007d52160 in ?? ()
+#35 0x00007f2a49ff9e50 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#36 0x0000000007d51940 in ?? ()
+#37 0x00007f2a531f6010 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#38 0x0000000007d52160 in ?? ()
+#39 0x0000000007d52160 in ?? ()
+#40 0x0000000007d52010 in ?? ()
+#41 0x0000000007d52088 in ?? ()
+#42 0x0000000007d52088 in ?? ()
+#43 0x0000000007d52010 in ?? ()
+#44 0x0000000000665c50 in ?? ()
+#45 0x000000000067e0a0 in ?? ()
+#46 0x00007f2a54d3cee4 in llvm::sys::DynamicLibrary::SearchForAddressOfSymbol(char const*) () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#47 0x00007ffcd84ea5d8 in ?? ()
+#48 0x00007ffcd84ea598 in ?? ()
+#49 0x00007ffcd84ea588 in ?? ()
+#50 0x00007ffcd84ea578 in ?? ()
+#51 0x00007ffcd84ea560 in ?? ()
+#52 0x000000000590d328 in ?? ()
+#53 0x00007ffcd84ea540 in ?? ()
+#54 0x00007ffcd84ea1b0 in ?? ()
+#55 0x00007ffcd84ea280 in ?? ()
+#56 0x00007f2a5317d430 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#57 0x00007f2a5317d661 in std::_Function_base::_Base_manager<llvm::orc::RTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>, std::shared_ptr<llvm::JITSymbolResolver>, llvm::orc::RTDyldObjectLinkingLayer::addObject(std::shared_ptr<llvm::object::OwningBinary<llvm::object::ObjectFile> >, std::shared_ptr<llvm::JITSymbolResolver>)::{lambda(std::_List_iterator<std::unique_ptr<llvm::orc::RTDyldObjectLinkingLayerBase::LinkedObject, std::default_delete<llvm::orc::RTDyldObjectLinkingLayerBase::LinkedObject> > >, llvm::RuntimeDyld&, std::shared_ptr<llvm::object::OwningBinary<llvm::object::ObjectFile> > const&, std::function<void ()>)#1}>::getSymbolMaterializer(std::string)::{lambda()#1}>::_M_manager(std::_Any_data&, llvm::orc::RTDyldObjectLinkingLayer::ConcreteLinkedObject<std::shared_ptr<llvm::RuntimeDyld::MemoryManager>, std::shared_ptr<llvm::JITSymbolResolver>, llvm::orc::RTDyldObjectLinkingLayer::addObject(std::shared_ptr<llvm::object::OwningBinary<llvm::object::ObjectFile> >, std::shared_ptr<llvm::JITSymbolResolver>)::{lambda(std::_List_iterator<std::unique_ptr<llvm::orc::RTDyldObjectLinkingLayerBase::LinkedObject, std::default_delete<llvm::orc::RTDyldObjectLinkingLayerBase::LinkedObject> > >, llvm::RuntimeDyld&, std::shared_ptr<llvm::object::OwningBinary<llvm::object::ObjectFile> > const&, std::function<void ()>)#1}>::getSymbolMaterializer(std::string)::{lambda()#1} const&, std::_Manager_operation) () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#58 0x0000000000690a60 in ?? ()
+#59 0x0000000000610a10 in ?? ()
+#60 0x0000000000610a18 in ?? ()
+#61 0x00007f2a570450c0 in ?? () from /lib64/libdl.so.2
+#62 0x00007f2a570450d4 in dlsym_doit () from /lib64/libdl.so.2
+#63 0x00007f2a585af914 in _dl_catch_error () from /lib64/ld-linux-x86-64.so.2
+#64 0x00007f2a581f7580 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCore.so
+#65 0x00000000079e4a90 in ?? ()
+#66 0x00007f2a4bf4ca60 in ?? ()
+#67 0x00000000079e4a90 in ?? ()
+#68 0x0000000000000013 in ?? ()
+#69 0x00007ffcd84ea540 in ?? ()
+#70 0x0000002a074fbe38 in ?? ()
+#71 0x404740a2ffbdb252 in ?? ()
+#72 0x0000000007f469c0 in ?? ()
+#73 0x00007f2a49fed330 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#74 0x0000000007d51940 in ?? ()
+#75 0x00007f2a4bf4ca60 in ?? ()
+#76 0x0000000007d51940 in ?? ()
+#77 0x00007ffcd84ea540 in ?? ()
+#78 0x0000000007f469c0 in ?? ()
+#79 0x0000000000000001 in ?? ()
+#80 0x00007ffcd84ea560 in ?? ()
+#81 0x00007ffcd84ea708 in ?? ()
+#82 0x00007ffcd84ea5a8 in ?? ()
+#83 0x0000000005d04890 in ?? ()
+#84 0x00007f2a5317a0e0 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#85 0x00007ffcd84ea5c0 in ?? ()
+#86 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#87 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#88 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#89 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#90 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#91 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#92 0x00007f2a57d4b640 in ?? () from /lib64/libstdc++.so.6
+#93 0x00007ffcd84ea3f0 in ?? ()
+#94 0x00007ffcd84ea3d0 in ?? ()
+#95 0x00007ffcd84ea788 in ?? ()
+#96 0x00000000074c76f0 in ?? ()
+#97 0x0000000007fb0d60 in ?? ()
+#98 0x00007f2a4bf4ca60 in ?? ()
+#99 0x00007ffcd84ea788 in ?? ()
+#100 0x3fb9407271cbc289 in ?? ()
+#101 0x0000000007e5cc00 in ?? ()
+#102 0xbface61d1b01ccae in ?? ()
+#103 0x0000000007e5cc00 in ?? ()
+#104 0x3fac45f6fa75b8fe in ?? ()
+#105 0x0000000007e5cc00 in ?? ()
+#106 0x3fae444ba32f6f48 in ?? ()
+#107 0x0000000007e5cc00 in ?? ()
+#108 0x0000000100000035 in ?? ()
+#109 0x0000000007e5cc00 in ?? ()
+#110 0x0000000007e5cc00 in ?? ()
+#111 0x00000000079e4a90 in ?? ()
+#112 0x0000042658779000 in ?? ()
+#113 0x00000000079e4a90 in ?? ()
+#114 0x000223d500000426 in ?? ()
+#115 0x000000000787ec00 in ?? ()
+#116 0x0000000000031058 in ?? ()
+#117 0x000000000787ec00 in ?? ()
+#118 0x0000000000031058 in ?? ()
+#119 0x00007f2a4aa92bc0 in ?? () from /expsoft/Delphes-3.4.1/libDelphes.so
+#120 0x0000000007d52010 in ?? ()
+#121 0x00007f2a49fe8f80 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#122 0x0000000007d52010 in ?? ()
+#123 0x0000000007d51940 in ?? ()
+#124 0x00007f2a49fe8f80 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libHist.so
+#125 0x0000000007d51940 in ?? ()
+#126 0x00000000079a2050 in ?? ()
+#127 0x00007f2a49613e10 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libGpad.so
+#128 0x0000000154928c65 in ?? ()
+#129 0x00000000079a2050 in ?? ()
+#130 0x000000005760e760 in ?? ()
+#131 0x000000000787ec00 in ?? ()
+#132 0x00000000079e4a90 in ?? ()
+#133 0x00007f2a581fda90 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCore.so
+#134 0x00000000075315f8 in ?? ()
+#135 0x00000000079e4a90 in ?? ()
+#136 0x000000000787ec00 in ?? ()
+#137 0x00007f2a57aa4070 in ?? () from /lib64/libstdc++.so.6
+#138 0x000000000787ec00 in ?? ()
+#139 0x0000000007844bf0 in ?? ()
+#140 0x0000000007844bf0 in ?? ()
+#141 0x00007f2a55cf5120 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libRIO.so
+#142 0x00000001d84ea4ef in ?? ()
+#143 0x000000000787ec00 in ?? ()
+#144 0x0000000007f9f060 in ?? ()
+#145 0x00000000074c76f0 in ?? ()
+#146 0x00000000074c76f0 in ?? ()
+#147 0x00000000074c76f0 in ?? ()
+#148 0x0000000007e474f0 in ?? ()
+#149 0x0000000007fa3f80 in ?? ()
+#150 0x0000000007fa4608 in ?? ()
+#151 0x0000000007fa4608 in ?? ()
+#152 0x0000000007e47d30 in ?? ()
+#153 0x00007f2a5317d430 in ?? () from /expsoft/ROOT/6.12.04-native/lib/root/libCling.so
+#154 0x0000023effffffff in ?? ()
+#155 0x0000000007e553b0 in ?? ()
+#156 0x000000135317dbc8 in ?? ()
+#157 0x0000000007fa4a70 in ?? ()
+#158 0x0000000007fa50f8 in ?? ()
+#159 0x0000000007fa5570 in ?? ()
+#160 0x0000000154941416 in ?? ()
+#161 0x0000000007f469c0 in ?? ()
+#162 0x0000000007f46a18 in ?? ()
+#163 0x0000000007f46a18 in ?? ()
+#164 0x00007f2a4adc05f0 in vtable for fastjet::Selector () from /expsoft/Delphes-3.4.1/libDelphes.so
+#165 0x0000000007e7c930 in ?? ()
+#166 0x00007f2a4adc05f0 in vtable for fastjet::Selector () from /expsoft/Delphes-3.4.1/libDelphes.so
+#167 0x00000000079a0080 in ?? ()
+#168 0x00007f2a4adc05f0 in vtable for fastjet::Selector () from /expsoft/Delphes-3.4.1/libDelphes.so
+#169 0x000000000799d020 in ?? ()
+#170 0x0000000000000000 in ?? ()
+===========================================================
+
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: pdf file generator_jet_ratio_low_pt40_1K.pdf has been created
+Real time 0:00:18, CP time 9.040
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: pdf file generator_jet_ratio_low_pt40_200K.pdf has been created
+Real time 0:30:11, CP time 1797.920
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: pdf file generator_jet_ratio_mid_pt45_200K.pdf has been created
+Real time 0:32:49, CP time 1856.300
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: pdf file generator_jet_ratio_mid_pt45_200K.pdf has been created
+Real time 0:32:03, CP time 1833.600
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: pdf file generator_jet_ratio_high_pt120_200K.pdf has been created
+Real time 0:01:41, CP time 89.060
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Real time 0:31:45, CP time 1827.550
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_jet_kinematics.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: eps file jets_kinematics_pt40.eps has been created
+Real time 0:36:34, CP time 1790.470
+
+Processing generator_jet_kinematics.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_jet_kinematics.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: eps file jets_kinematics_pt60.eps has been created
+Real time 0:34:41, CP time 1991.990
+
+Processing generator_jet_kinematics.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: eps file jets_kinematics_pt60.eps has been created
+Real time 0:31:32, CP time 1844.210
+
+Processing generator_jet_kinematics.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Info in <TCanvas::Print>: eps file jets_kinematics_pt120.eps has been created
+Real time 0:37:33, CP time 2153.390
+
+Processing generator_jet_find.cpp...
+In file included from input_line_18:1:
+/home/cpapage/src/multicpu/bkg/generator_jets/generator_jet_find.cpp:108:1: error: use of undeclared identifier 'u'
+u                                               if (isolation/mother->Pt() < 0.08) {
+^
+
+Processing generator_jet_find.cpp...
+In file included from input_line_18:1:
+/home/cpapage/src/multicpu/bkg/generator_jets/generator_jet_find.cpp:108:1: error: use of undeclared identifier 'u'
+u                                               if (isolation/mother->Pt() < 0.08) {
+^
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Real time 0:36:37, CP time 2118.580
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Real time 0:35:28, CP time 2044.580
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Real time 0:45:32, CP time 2639.530
+Real time 0:43:29, CP time 2517.010
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+Real time 1:50:04, CP time 6528.190
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Real time 0:44:21, CP time 2577.490
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+Real time 1:01:09, CP time 3584.590
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+Real time 1:58:43, CP time 7028.400
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+
+Processing generator_jet_find.cpp...
+#--------------------------------------------------------------------------
+#                         FastJet release 3.2.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the terms of the GNU GPLv2.
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Ran Longitudinally invariant anti-kt algorithm with R = 0.5 and E scheme recombination
+Strategy adopted by FastJet was N2Tiled
+
+Real time 0:44:24, CP time 2584.030
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+Real time 1:01:13, CP time 3592.090
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+
+Real time 1:58:29, CP time 7024.240
+Error in <RootX11IOErrorHandler>: fatal X11 error (connection to server lost?!)
+
+**** Save data and exit application ****
+

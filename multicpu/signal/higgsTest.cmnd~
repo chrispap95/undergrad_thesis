@@ -1,0 +1,7 @@
+! Higgs to JPsiGamma Pythia8 card
+! Other common settings
+Stat:showPartonLevel = on                   ! additional statistics on MPI
+Main:numberOfEvents = 1000                   ! Number of events to generate
+
+! Higgs to JPsiGamma Pythia Settings
+HiggsSM:gg2H = on                         ! Enable all Higgs production processes within the SM

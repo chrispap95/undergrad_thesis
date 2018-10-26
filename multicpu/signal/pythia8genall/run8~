@@ -1,0 +1,48 @@
+#!/bin/bash
+echo "Compiling..."
+gcc -g -Og -std=c++11 pythia8hepmc.cpp -I`${ROOTSYS}/bin/root-config --incdir` `${ROOTSYS}/bin/root-config --libs` -L/expsoft/pythia8/lib -lpythia8 -I/expsoft/pythia8/include/Pythia8 -I/expsoft/pythia8/include -lstdc++ -lm -lEG -lEGPythia8 -L/expsoft/hepmc2/lib -lHepMC -o pythia8hepmc
+if [[ "$?" == "0" ]]; then
+	echo -n "Generating random seeds... "	
+	sSEED=""
+        for i in `seq 1 8`;do 
+		# generate a random seed between 1 and 900000000
+		sSEED+="$(expr $RANDOM \* $(echo $RANDOM / 1.193 | bc) + 1) "
+	done
+	SEED=($sSEED)	
+	echo "done"
+
+	echo "Running GEN stage with Pythia..."
+	sleep 5
+        for i in `seq 0 7`;do 
+                "cp" -f ../higgsTojpsiGamma.cmnd higgsTojpsiGamma${i}.cmnd
+                echo "Random:seed = ${SEED[$i]}" >> higgsTojpsiGamma${i}.cmnd
+                ./pythia8hepmc higgsTojpsiGamma${i}.cmnd /data/$USER/higgsTojpsiGamma-gen${i}.hepmc &
+        done
+
+	wait
+
+	if [[ "$?" == "0" ]]; then
+		echo "GEN stage completed successfully"
+		echo "Running SIM stage with Delphes..."
+		sleep 5
+	        for i in `seq 0 7`;do 
+	                "cp" -f ../delphes_card_CMS_PileUp.tcl delphes_card_CMS_PileUp${i}.tcl
+			sed -i ./delphes_card_CMS_PileUp${i}.tcl -e "s/set RandomSeed 0/set RandomSeed ${SEED[$i]}/"
+			/expsoft/Delphes/DelphesHepMC ./delphes_card_CMS_PileUp${i}.tcl /data/$USER/higgsTojpsiGamma-sim${i}.root /data/$USER/higgsTojpsiGamma-gen${i}.hepmc &
+		done
+
+		wait 
+
+		if [[ "$?" == "0" ]]; then
+			echo "SIM stage completed successfully"
+			echo "run \`hadd /data/$USER/higgsTojpsiGamma-sim8x.root /data/$USER/higgsTojpsiGamma-sim?.root' to combine results, then"
+			echo "run \`root -l /data/$USER//higgsTojpsiGamma-sim8x.root' to view results"
+		else
+			echo "SIM stage failed"
+		fi
+	else
+		echo "GEN stage failed"
+	fi
+else
+	echo "Compilation failed"
+fi
